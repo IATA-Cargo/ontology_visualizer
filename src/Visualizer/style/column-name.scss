@@ -9,7 +9,7 @@
   font-size: 12px;
   line-height: 1;
 
-  cursor: pointer;
+  
 
   &__name {
     margin-right: 16px;
@@ -20,11 +20,24 @@
     color: #BBB;
     fill: #BBB;
     display: flex;
+    cursor: pointer;
   }
 
   &__type:hover {
     color:rgb(12, 81, 230);
     fill:rgb(12, 81, 230);
+  }
+
+  &__nameHover:hover {
+    color:rgb(12, 81, 230);
+    fill:rgb(12, 81, 230);
+    cursor: pointer;
+  }
+
+  &__nameHover:active {
+    color:rgb(230, 12, 12);
+    fill:rgb(230, 12, 12);
+    cursor: pointer;
   }
 
   &__description {
