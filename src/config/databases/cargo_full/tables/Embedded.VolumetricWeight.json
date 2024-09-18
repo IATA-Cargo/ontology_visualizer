@@ -10,7 +10,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#VolumetricWeight",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#chargeableWeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "conversionFactor",
@@ -19,7 +22,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#VolumetricWeight",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#conversionFactor",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#double"
     }
   ]
 }

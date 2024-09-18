@@ -10,7 +10,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#code",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "codeDescription",
@@ -19,7 +22,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#codeDescription",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "codeLevel",
@@ -28,7 +34,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#codeLevel",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
     },
     {
       "name": "codeListName",
@@ -37,7 +46,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#codeListName",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "codeListReference",
@@ -46,7 +58,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#codeListReference",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "codeListVersion",
@@ -55,7 +70,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#codeListVersion",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     }
   ]
 }

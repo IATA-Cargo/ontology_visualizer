@@ -10,16 +10,22 @@
       "schemaType": "DG",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#DgRadioactiveIsotope",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#contentOfDgProductRadioactive",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#DgProductRadioactive"
     },
     {
       "name": "physicalChemicalForm",
       "description": "A description of the physical and chemical form of the material.",
-      "type": "RadioactiveMaterialClassification",
+      "type": "ccodes:RadioactiveMaterialClassification",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#DgRadioactiveIsotope",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#physicalChemicalForm",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#RadioactiveMaterialClassification"
     },
     {
       "name": "checks",
@@ -28,7 +34,10 @@
       "schemaType": "Action",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#DgRadioactiveIsotope",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
     },
     {
       "name": "externalReferences",
@@ -37,7 +46,10 @@
       "schemaType": "Common",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#DgRadioactiveIsotope",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
     },
     {
       "name": "activityLevelMeasure",
@@ -46,7 +58,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#DgRadioactiveIsotope",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#activityLevelMeasure",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "criticalitySafetyIndexNumeric",
@@ -55,7 +70,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#DgRadioactiveIsotope",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#criticalitySafetyIndexNumeric",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "isotopeId",
@@ -64,7 +82,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#DgRadioactiveIsotope",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#isotopeId",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "isotopeName",
@@ -73,7 +94,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#DgRadioactiveIsotope",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#isotopeName",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "lowDispersibleIndicator",
@@ -82,7 +106,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#DgRadioactiveIsotope",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#lowDispersibleIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
     },
     {
       "name": "specialFormIndicator",
@@ -91,7 +118,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#DgRadioactiveIsotope",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#specialFormIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
     },
     {
       "name": "events",
@@ -100,7 +130,10 @@
       "schemaType": "Event",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#DgRadioactiveIsotope",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",
@@ -109,7 +142,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#DgRadioactiveIsotope",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
     }
   ]
 }

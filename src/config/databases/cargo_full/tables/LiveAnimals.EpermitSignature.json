@@ -10,7 +10,10 @@
       "schemaType": "LiveAnimals",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitSignature",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#forEpermit",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LiveAnimalsEpermit"
     },
     {
       "name": "signatoryCompany",
@@ -19,25 +22,34 @@
       "schemaType": "Agent",
       "array": false,
       "codelist": false,
-      "columnSubTypes": "Carrier"
+      "columnSubTypes": "Carrier",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitSignature",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#signatoryCompany",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Company"
     },
     {
       "name": "signatoryRole",
       "description": "Role of the signatory with regards to the ePermit: Applicant; Permit issuer; Issuing Authority or Examining authority",
-      "type": "SignatoryRole",
+      "type": "ccodes:SignatoryRole",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitSignature",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#signatoryRole",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#SignatoryRole"
     },
     {
       "name": "signatureTypeCode",
       "description": "Code specifying a type of government action such as inspection; detention; fumigation; security.",
-      "type": "SignatureTypeCode",
+      "type": "ccodes:SignatureTypeCode",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitSignature",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#signatureTypeCode",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#SignatureTypeCode"
     },
     {
       "name": "checks",
@@ -46,7 +58,10 @@
       "schemaType": "Action",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitSignature",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
     },
     {
       "name": "externalReferences",
@@ -55,7 +70,10 @@
       "schemaType": "Common",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitSignature",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
     },
     {
       "name": "securityStampId",
@@ -64,7 +82,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitSignature",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#securityStampId",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "signatureDate",
@@ -73,7 +94,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitSignature",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#signatureDate",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     {
       "name": "signatureStatement",
@@ -82,7 +106,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitSignature",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#signatureStatement",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "events",
@@ -91,7 +118,10 @@
       "schemaType": "Event",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitSignature",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",
@@ -100,7 +130,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitSignature",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
     }
   ]
 }

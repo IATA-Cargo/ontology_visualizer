@@ -10,7 +10,10 @@
       "schemaType": "Activity",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#inUnitComposition",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#UnitComposition"
     },
     {
       "name": "tareWeight",
@@ -19,7 +22,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#tareWeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "checks",
@@ -28,7 +34,10 @@
       "schemaType": "Action",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
     },
     {
       "name": "externalReferences",
@@ -37,7 +46,10 @@
       "schemaType": "Common",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
     },
     {
       "name": "attachedIotDevices",
@@ -46,25 +58,34 @@
       "schemaType": "Common",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#attachedIotDevices",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#IotDevice"
     },
     {
       "name": "demurrageCode",
       "description": "Contains three designator of demurrage code; refer to RP 1654 (BCC; HHH; XXX; ZZZ)",
-      "type": "DemurrageCode",
+      "type": "ccodes:DemurrageCode",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#demurrageCode",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#DemurrageCode"
     },
     {
       "name": "loadingIndicator",
       "description": "ULD height or loading limitation code. Refer CXML Code List 1.47;  e.g. R - ULD Height above 244 centimetres",
-      "type": "ULDLoadingIndicator",
+      "type": "ccodes:ULDLoadingIndicator",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#loadingIndicator",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#ULDLoadingIndicator"
     },
     {
       "name": "odlnCode",
@@ -73,7 +94,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#odlnCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
     },
     {
       "name": "ownerCode",
@@ -82,16 +106,22 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#ownerCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
     },
     {
       "name": "serviceabilityCode",
       "description": "Designator of serviceablity condition e.g. SER or DAM ",
-      "type": "ULDConditionCode",
+      "type": "ccodes:ULDConditionCode",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#serviceabilityCode",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#ULDConditionCode"
     },
     {
       "name": "uldTypeCode",
@@ -100,7 +130,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#uldTypeCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
     },
     {
       "name": "remarks",
@@ -109,7 +142,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#remarks",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "events",
@@ -118,7 +154,10 @@
       "schemaType": "Event",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",
@@ -127,7 +166,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
     },
     {
       "name": "involvedInActions",
@@ -136,7 +178,10 @@
       "schemaType": "Abstract",
       "array": true,
       "codelist": false,
-      "columnSubTypes": "Check|Composing|Loading|Storing"
+      "columnSubTypes": "Check|Composing|Loading|Storing",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#involvedInActions",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction"
     },
     {
       "name": "ataDesignator",
@@ -145,7 +190,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#ataDesignator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "damageFlag",
@@ -154,7 +202,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#damageFlag",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
     },
     {
       "name": "numberOfDoors",
@@ -163,7 +214,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#numberOfDoors",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
     },
     {
       "name": "numberOfFittings",
@@ -172,7 +226,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#numberOfFittings",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
     },
     {
       "name": "numberOfNets",
@@ -181,7 +238,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#numberOfNets",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
     },
     {
       "name": "numberOfStraps",
@@ -190,7 +250,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#numberOfStraps",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
     },
     {
       "name": "sealNumber",
@@ -199,7 +262,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#sealNumber",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "uldSerialNumber",
@@ -208,7 +274,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULD",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#uldSerialNumber",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     }
   ]
 }

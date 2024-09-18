@@ -8,4 +8,7 @@ export interface TableColumnConfig {
   array?: boolean;
   codelist?: boolean;
   key?: boolean;
+  propertyIRI?: string;
+  classIRI?: string;
+  valueIRI?: string;
 };

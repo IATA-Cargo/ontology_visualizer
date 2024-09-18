@@ -10,7 +10,10 @@
       "schemaType": "Common",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#createdAtLocation",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Location"
     },
     {
       "name": "originator",
@@ -19,7 +22,10 @@
       "schemaType": "Agent",
       "array": false,
       "codelist": false,
-      "columnSubTypes": "Carrier"
+      "columnSubTypes": "Carrier",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#originator",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Company"
     },
     {
       "name": "referenceForObjects",
@@ -28,7 +34,10 @@
       "schemaType": "Abstract",
       "array": true,
       "codelist": false,
-      "columnSubTypes": "LogisticsActivity|Answer|Actor|Piece|Location|EpermitConsignment|Organization|IotDevice|PhysicalLogisticsObject|BillingDetails|Booking|BookingOption|BookingRequest|BookingShipment|Carrier|Person|Check|CheckTemplate|CheckTotalResult|CO2Emissions|LoadingMaterial|Composing|Sensor|PieceLiveAnimals|Item|DgProductRadioactive|Product|CustomsInformation|Waybill|DgDeclaration|ExternalReference|LiveAnimalsEpermit|BookingOptionRequest|Price|ProductDg|UnitComposition|Insurance|Shipment|LogisticsAction|DgRadioactiveIsotope|LoadingUnit|Loading|TransportMeans|TransportMovement|Company|PackagingType|LogisticsAgent|Question|Ratings|SecurityDeclaration|LogisticsService|EpermitSignature|Storing|TransportLegs|PieceDg|ItemDg|NonHumanActor|PublicAuthority|Storage|ULD"
+      "columnSubTypes": "LogisticsActivity|Answer|Actor|Piece|Location|EpermitConsignment|Organization|IotDevice|PhysicalLogisticsObject|BillingDetails|Booking|BookingOption|BookingRequest|BookingShipment|Carrier|Person|Check|CheckTemplate|CheckTotalResult|CO2Emissions|LoadingMaterial|Composing|Sensor|PieceLiveAnimals|Item|DgProductRadioactive|Product|CustomsInformation|Waybill|DgDeclaration|ExternalReference|LiveAnimalsEpermit|BookingOptionRequest|Price|ProductDg|UnitComposition|Insurance|Shipment|LogisticsAction|DgRadioactiveIsotope|LoadingUnit|Loading|TransportMeans|TransportMovement|Company|PackagingType|LogisticsAgent|Question|Ratings|SecurityDeclaration|LogisticsService|EpermitSignature|Storing|TransportLegs|PieceDg|ItemDg|NonHumanActor|PublicAuthority|Storage|ULD",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#referenceForObjects",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsObject"
     },
     {
       "name": "checks",
@@ -37,7 +46,10 @@
       "schemaType": "Action",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
     },
     {
       "name": "externalReferences",
@@ -46,7 +58,10 @@
       "schemaType": "Common",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
     },
     {
       "name": "checksum",
@@ -55,7 +70,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checksum",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "documentIdentifier",
@@ -64,7 +82,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#documentIdentifier",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "documentLink",
@@ -73,7 +94,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#documentLink",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "documentName",
@@ -82,7 +106,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#documentName",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "documentType",
@@ -91,7 +118,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#documentType",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "documentVersion",
@@ -100,7 +130,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#documentVersion",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "validFrom",
@@ -109,7 +142,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#validFrom",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     {
       "name": "validUntil",
@@ -118,7 +154,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#validUntil",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     {
       "name": "events",
@@ -127,7 +166,10 @@
       "schemaType": "Event",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",
@@ -136,7 +178,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
     }
   ]
 }

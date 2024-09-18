@@ -10,7 +10,10 @@
       "schemaType": "LiveAnimals",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitConsignment",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#consignmentItems",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#PieceLiveAnimals"
     },
     {
       "name": "epermit",
@@ -19,7 +22,10 @@
       "schemaType": "LiveAnimals",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitConsignment",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#epermit",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LiveAnimalsEpermit"
     },
     {
       "name": "examiningQuantity",
@@ -28,7 +34,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitConsignment",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#examiningQuantity",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "checks",
@@ -37,7 +46,10 @@
       "schemaType": "Action",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitConsignment",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
     },
     {
       "name": "externalReferences",
@@ -46,7 +58,10 @@
       "schemaType": "Common",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitConsignment",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
     },
     {
       "name": "usedToDateQuotaQuantity",
@@ -55,7 +70,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitConsignment",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#usedToDateQuotaQuantity",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
     },
     {
       "name": "events",
@@ -64,7 +82,10 @@
       "schemaType": "Event",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitConsignment",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",
@@ -73,7 +94,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitConsignment",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
     }
   ]
 }

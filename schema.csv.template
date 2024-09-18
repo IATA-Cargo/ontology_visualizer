@@ -1,4 +1,4 @@
-"table_schema","table_name","column_name","schema_type","data_type","ordinal_position","table_description","property_description","is_array","is_codelist"
+"table_schema","table_name","column_name","schema_type","data_type","ordinal_position","table_description","property_description","is_array","is_codelist","data_type_subclasses","class_IRI","property_IRI","value_IRI"
 "adjust","callbacks","id","bigint",1
 "adjust","callbacks","tracker","character varying",2
 "adjust","callbacks","created_at","timestamp without time zone",3

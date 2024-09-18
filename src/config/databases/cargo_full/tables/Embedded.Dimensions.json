@@ -10,7 +10,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Dimensions",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#height",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "length",
@@ -19,7 +22,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Dimensions",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#length",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "volume",
@@ -28,7 +34,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Dimensions",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#volume",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "width",
@@ -37,7 +46,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Dimensions",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#width",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     }
   ]
 }

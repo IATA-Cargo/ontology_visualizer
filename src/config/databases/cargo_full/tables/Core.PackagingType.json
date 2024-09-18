@@ -10,7 +10,10 @@
       "schemaType": "Action",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PackagingType",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
     },
     {
       "name": "externalReferences",
@@ -19,7 +22,10 @@
       "schemaType": "Common",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PackagingType",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
     },
     {
       "name": "appliedOnPieces",
@@ -28,7 +34,10 @@
       "schemaType": "Core",
       "array": true,
       "codelist": false,
-      "columnSubTypes": "PieceLiveAnimals|PieceDg"
+      "columnSubTypes": "PieceLiveAnimals|PieceDg",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PackagingType",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#appliedOnPieces",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Piece"
     },
     {
       "name": "typeCode",
@@ -37,7 +46,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PackagingType",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#typeCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
     },
     {
       "name": "events",
@@ -46,7 +58,10 @@
       "schemaType": "Event",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PackagingType",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",
@@ -55,7 +70,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PackagingType",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
     },
     {
       "name": "description",
@@ -64,7 +82,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PackagingType",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#description",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     }
   ]
 }

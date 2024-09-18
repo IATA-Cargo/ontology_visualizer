@@ -10,7 +10,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Address",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#addressCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
     },
     {
       "name": "cityCode",
@@ -19,7 +22,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Address",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#cityCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
     },
     {
       "name": "country",
@@ -28,7 +34,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Address",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#country",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
     },
     {
       "name": "postalCode",
@@ -37,7 +46,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Address",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#postalCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
     },
     {
       "name": "regionCode",
@@ -46,7 +58,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Address",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#regionCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
     },
     {
       "name": "postOfficeBox",
@@ -55,7 +70,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Address",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#postOfficeBox",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "streetAddressLines",
@@ -64,7 +82,10 @@
       "schemaType": "",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Address",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#streetAddressLines",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     }
   ]
 }

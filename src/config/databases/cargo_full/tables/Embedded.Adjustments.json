@@ -10,7 +10,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Adjustments",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#correctionNumber",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
     },
     {
       "name": "correctionSerialNumber",
@@ -19,7 +22,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Adjustments",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#correctionSerialNumber",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "reasonsForAdjustments",
@@ -28,7 +34,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Adjustments",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#reasonsForAdjustments",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     }
   ]
 }

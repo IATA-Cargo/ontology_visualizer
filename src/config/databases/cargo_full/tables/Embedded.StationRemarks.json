@@ -10,7 +10,10 @@
       "schemaType": "Common",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#StationRemarks",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#station",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Location"
     },
     {
       "name": "remarksText",
@@ -19,7 +22,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#StationRemarks",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#remarksText",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     }
   ]
 }

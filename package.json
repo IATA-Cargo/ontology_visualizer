@@ -36,8 +36,8 @@
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "reset": "bin/reset",
-    "import": "bin/import"
+    "reset": "node bin/reset",
+    "import": "node bin/import"
   },
   "eslintConfig": {
     "extends": [

@@ -10,7 +10,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CarrierProduct",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#productCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
     },
     {
       "name": "serviceLevelCode",
@@ -19,7 +22,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CarrierProduct",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#serviceLevelCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
     },
     {
       "name": "productDescription",
@@ -28,7 +34,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CarrierProduct",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#productDescription",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     }
   ]
 }

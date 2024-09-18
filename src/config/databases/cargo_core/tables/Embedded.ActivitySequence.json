@@ -10,7 +10,10 @@
       "schemaType": "Abstract",
       "array": false,
       "codelist": false,
-      "columnSubTypes": "UnitComposition|TransportMovement|Storage"
+      "columnSubTypes": "UnitComposition|TransportMovement|Storage",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ActivitySequence",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#activity",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsActivity"
     },
     {
       "name": "sequenceNumber",
@@ -19,7 +22,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ActivitySequence",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#sequenceNumber",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     }
   ]
 }

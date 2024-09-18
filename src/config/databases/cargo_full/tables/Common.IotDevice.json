@@ -10,7 +10,10 @@
       "schemaType": "Abstract",
       "array": false,
       "codelist": false,
-      "columnSubTypes": "Piece|Location|IotDevice|LoadingMaterial|Sensor|PieceLiveAnimals|Item|LoadingUnit|TransportMeans|PieceDg|ItemDg|ULD"
+      "columnSubTypes": "Piece|Location|IotDevice|LoadingMaterial|Sensor|PieceLiveAnimals|Item|LoadingUnit|TransportMeans|PieceDg|ItemDg|ULD",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#attachedToObject",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#PhysicalLogisticsObject"
     },
     {
       "name": "connectedSensors",
@@ -19,7 +22,10 @@
       "schemaType": "Common",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#connectedSensors",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Sensor"
     },
     {
       "name": "manufacturer",
@@ -28,7 +34,10 @@
       "schemaType": "Agent",
       "array": false,
       "codelist": false,
-      "columnSubTypes": "Carrier"
+      "columnSubTypes": "Carrier",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#manufacturer",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Company"
     },
     {
       "name": "checks",
@@ -37,7 +46,10 @@
       "schemaType": "Action",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
     },
     {
       "name": "externalReferences",
@@ -46,7 +58,10 @@
       "schemaType": "Common",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
     },
     {
       "name": "attachedIotDevices",
@@ -55,7 +70,10 @@
       "schemaType": "Common",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#attachedIotDevices",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#IotDevice"
     },
     {
       "name": "description",
@@ -64,7 +82,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#description",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "deviceModel",
@@ -73,7 +94,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#deviceModel",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "name",
@@ -82,7 +106,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#name",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "serialNumber",
@@ -91,7 +118,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#serialNumber",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "events",
@@ -100,7 +130,10 @@
       "schemaType": "Event",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",
@@ -109,7 +142,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
     },
     {
       "name": "involvedInActions",
@@ -118,7 +154,10 @@
       "schemaType": "Abstract",
       "array": true,
       "codelist": false,
-      "columnSubTypes": "Check|Composing|Loading|Storing"
+      "columnSubTypes": "Check|Composing|Loading|Storing",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#involvedInActions",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction"
     }
   ]
 }

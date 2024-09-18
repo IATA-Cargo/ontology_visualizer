@@ -10,7 +10,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Geolocation",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#elevation",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "latitude",
@@ -19,7 +22,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Geolocation",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#latitude",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#double"
     },
     {
       "name": "longitude",
@@ -28,7 +34,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Geolocation",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#longitude",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#double"
     }
   ]
 }

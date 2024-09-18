@@ -10,7 +10,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#OtherIdentifier",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#otherIdentifierType",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "textualValue",
@@ -19,7 +22,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#OtherIdentifier",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#textualValue",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     }
   ]
 }

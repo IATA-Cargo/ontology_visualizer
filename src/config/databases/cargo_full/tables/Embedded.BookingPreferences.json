@@ -6,11 +6,14 @@
     {
       "name": "aircraftPossibilityCode",
       "description": "Type of aircraft to be used if any specific requirements (e.g. Pure freighter; etc.)",
-      "type": "AircraftPossibilityCode",
+      "type": "ccodes:AircraftPossibilityCode",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingPreferences",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#aircraftPossibilityCode",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#AircraftPossibilityCode"
     },
     {
       "name": "excludedViaPoints",
@@ -19,7 +22,10 @@
       "schemaType": "Common",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingPreferences",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#excludedViaPoints",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Location"
     },
     {
       "name": "includedViaPoints",
@@ -28,7 +34,10 @@
       "schemaType": "Common",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingPreferences",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#includedViaPoints",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Location"
     },
     {
       "name": "maxSegments",
@@ -37,7 +46,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingPreferences",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#maxSegments",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
     },
     {
       "name": "preferredTransportId",
@@ -46,7 +58,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingPreferences",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#preferredTransportId",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "priceReferenceId",
@@ -55,7 +70,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingPreferences",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#priceReferenceId",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     }
   ]
 }

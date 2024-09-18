@@ -6,20 +6,26 @@
     {
       "name": "chargePaymentType",
       "description": "Indicates if charge is prepaid or collect (P; C)",
-      "type": "PrepaidCollectIndicator",
+      "type": "ccodes:PrepaidCollectIndicator",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#OtherCharge",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#chargePaymentType",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#PrepaidCollectIndicator"
     },
     {
       "name": "entitlement",
       "description": "Entitlement code to define if charges are Due carrier (C) or Due agent (A). Refer to CXML Code List 1.3",
-      "type": "EntitlementCode",
+      "type": "ccodes:EntitlementCode",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#OtherCharge",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#entitlement",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#EntitlementCode"
     },
     {
       "name": "otherChargeAmount",
@@ -28,16 +34,22 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#OtherCharge",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#otherChargeAmount",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CurrencyValue"
     },
     {
       "name": "otherChargeCode",
       "description": "Refer to CargoXML Code List 1.2 for Other Charges",
-      "type": "OtherChargeCode",
+      "type": "ccodes:OtherChargeCode",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#OtherCharge",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#otherChargeCode",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#OtherChargeCode"
     }
   ]
 }

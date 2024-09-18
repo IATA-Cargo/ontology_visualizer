@@ -10,7 +10,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingTimes",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#earliestAcceptanceTime",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     {
       "name": "latestAcceptanceTime",
@@ -19,7 +22,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingTimes",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#latestAcceptanceTime",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     {
       "name": "latestArrivalTime",
@@ -28,7 +34,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingTimes",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#latestArrivalTime",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     {
       "name": "timeOfAvailability",
@@ -37,7 +46,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingTimes",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#timeOfAvailability",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     {
       "name": "totalTransitTime",
@@ -46,7 +58,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingTimes",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#totalTransitTime",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#duration"
     }
   ]
 }

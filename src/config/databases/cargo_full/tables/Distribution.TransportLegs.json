@@ -10,7 +10,10 @@
       "schemaType": "Core",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#TransportLegs",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#co2Emissions",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CO2Emissions"
     },
     {
       "name": "checks",
@@ -19,7 +22,10 @@
       "schemaType": "Action",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#TransportLegs",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
     },
     {
       "name": "externalReferences",
@@ -28,7 +34,10 @@
       "schemaType": "Common",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#TransportLegs",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
     },
     {
       "name": "arrivalLocation",
@@ -37,7 +46,10 @@
       "schemaType": "Common",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#TransportLegs",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#arrivalLocation",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Location"
     },
     {
       "name": "departureLocation",
@@ -46,16 +58,22 @@
       "schemaType": "Common",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#TransportLegs",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#departureLocation",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Location"
     },
     {
       "name": "transportMeansServiceType",
       "description": "Type of transport means service; e.g. Aircraftor Truck",
-      "type": "TransportMeansServiceType",
+      "type": "ccodes:TransportMeansServiceType",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#TransportLegs",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#transportMeansServiceType",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#TransportMeansServiceType"
     },
     {
       "name": "transportMeansType",
@@ -64,7 +82,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#TransportLegs",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#transportMeansType",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
     },
     {
       "name": "events",
@@ -73,7 +94,10 @@
       "schemaType": "Event",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#TransportLegs",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",
@@ -82,7 +106,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#TransportLegs",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
     },
     {
       "name": "arrivalDate",
@@ -91,7 +118,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#TransportLegs",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#arrivalDate",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     {
       "name": "departureDate",
@@ -100,7 +130,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#TransportLegs",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#departureDate",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     {
       "name": "legNumber",
@@ -109,7 +142,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#TransportLegs",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#legNumber",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
     },
     {
       "name": "transportIdentifier",
@@ -118,7 +154,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#TransportLegs",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#transportIdentifier",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     }
   ]
 }

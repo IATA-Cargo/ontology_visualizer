@@ -10,7 +10,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceHeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "pieceLength",
@@ -19,7 +22,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceLength",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "pieceWeight",
@@ -28,7 +34,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceWeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "pieceWidth",
@@ -37,7 +46,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceWidth",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "dryIceWeight",
@@ -46,7 +58,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#dryIceWeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "pieceGroupGrossWeight",
@@ -55,7 +70,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceGroupGrossWeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "stackable",
@@ -64,7 +82,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#stackable",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
     },
     {
       "name": "turnable",
@@ -73,7 +94,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#turnable",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
     },
     {
       "name": "pieceGroupCount",
@@ -82,7 +106,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceGroupCount",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
     },
     {
       "name": "pieceGroupId",
@@ -91,7 +118,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceGroupId",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
     }
   ]
 }

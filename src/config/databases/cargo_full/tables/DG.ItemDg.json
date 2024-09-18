@@ -10,7 +10,10 @@
       "schemaType": "Core",
       "array": false,
       "codelist": false,
-      "columnSubTypes": "PieceLiveAnimals|PieceDg"
+      "columnSubTypes": "PieceLiveAnimals|PieceDg",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#inPiece",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Piece"
     },
     {
       "name": "ofProduct",
@@ -19,7 +22,10 @@
       "schemaType": "Core",
       "array": false,
       "codelist": false,
-      "columnSubTypes": "ProductDg"
+      "columnSubTypes": "ProductDg",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#ofProduct",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Product"
     },
     {
       "name": "dimensions",
@@ -28,7 +34,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#dimensions",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Dimensions"
     },
     {
       "name": "itemQuantity",
@@ -37,7 +46,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#itemQuantity",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "productionCountry",
@@ -46,7 +58,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#productionCountry",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
     },
     {
       "name": "targetCountry",
@@ -55,7 +70,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#targetCountry",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
     },
     {
       "name": "unitPrice",
@@ -64,7 +82,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#unitPrice",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CurrencyValue"
     },
     {
       "name": "weight",
@@ -73,7 +94,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#weight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "emergencyContact",
@@ -82,7 +106,10 @@
       "schemaType": "Agent",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#emergencyContact",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Person"
     },
     {
       "name": "netWeightMeasure",
@@ -91,7 +118,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#netWeightMeasure",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "checks",
@@ -100,7 +130,10 @@
       "schemaType": "Action",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
     },
     {
       "name": "externalReferences",
@@ -109,7 +142,10 @@
       "schemaType": "Common",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
     },
     {
       "name": "attachedIotDevices",
@@ -118,7 +154,10 @@
       "schemaType": "Common",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#attachedIotDevices",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#IotDevice"
     },
     {
       "name": "otherIdentifiers",
@@ -127,7 +166,10 @@
       "schemaType": "Embedded",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#otherIdentifiers",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#OtherIdentifier"
     },
     {
       "name": "batchNumber",
@@ -136,7 +178,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#batchNumber",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "expiryDate",
@@ -145,7 +190,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#expiryDate",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     {
       "name": "lotNumber",
@@ -154,7 +202,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#lotNumber",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "productionDate",
@@ -163,7 +214,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#productionDate",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     {
       "name": "quantityForUnitPrice",
@@ -172,7 +226,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#quantityForUnitPrice",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#double"
     },
     {
       "name": "reportableQuantity",
@@ -181,7 +238,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#reportableQuantity",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "supplementaryInfoPrefix",
@@ -190,7 +250,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#supplementaryInfoPrefix",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "supplementaryInfoSuffix",
@@ -199,7 +262,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#supplementaryInfoSuffix",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "events",
@@ -208,7 +274,10 @@
       "schemaType": "Event",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",
@@ -217,7 +286,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
     },
     {
       "name": "involvedInActions",
@@ -226,7 +298,10 @@
       "schemaType": "Abstract",
       "array": true,
       "codelist": false,
-      "columnSubTypes": "Check|Composing|Loading|Storing"
+      "columnSubTypes": "Check|Composing|Loading|Storing",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ItemDg",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#involvedInActions",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction"
     }
   ]
 }

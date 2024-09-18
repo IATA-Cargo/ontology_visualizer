@@ -10,7 +10,10 @@
       "schemaType": "Distribution",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Price",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#forBookingOption",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#BookingOption"
     },
     {
       "name": "checks",
@@ -19,7 +22,10 @@
       "schemaType": "Action",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Price",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
     },
     {
       "name": "externalReferences",
@@ -28,16 +34,22 @@
       "schemaType": "Common",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Price",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
     },
     {
       "name": "chargeCode",
       "description": "Charge code; refer to CargoXML Code List 1.1",
-      "type": "ChargeCode",
+      "type": "ccodes:ChargeCode",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Price",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#chargeCode",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#ChargeCode"
     },
     {
       "name": "ratings",
@@ -46,7 +58,10 @@
       "schemaType": "Distribution",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Price",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#ratings",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Ratings"
     },
     {
       "name": "events",
@@ -55,7 +70,10 @@
       "schemaType": "Event",
       "array": true,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Price",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",
@@ -64,7 +82,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Price",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
     },
     {
       "name": "grandTotal",
@@ -73,7 +94,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Price",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#grandTotal",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#double"
     }
   ]
 }

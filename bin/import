@@ -12,7 +12,7 @@ const DATA_TYPES = {
 }
 
 const adjustDataTypeName = (rawName) => {
-  if(DATA_TYPES[rawName]) {
+  if (DATA_TYPES[rawName]) {
     return DATA_TYPES[rawName];
   } else {
     return rawName;
@@ -87,18 +87,24 @@ const importTableConfigs = async (databaseName, tables, tablesDescription) => {
       const columnType = row[1];
       const columnSchemaType = row[5];
       const propertyDescription = row[2];
-      const isArray = ((row[3]) ? JSON.parse(row[3].toLowerCase()) : false );
-      const isCodelist =  ((row[4]) ? JSON.parse(row[4].toLowerCase()) : false );
-      const columnSubTypes =  row[6];
+      const isArray = ((row[3]) ? JSON.parse(row[3].toLowerCase()) : false);
+      const isCodelist = ((row[4]) ? JSON.parse(row[4].toLowerCase()) : false);
+      const columnSubTypes = row[6];
+      const classIRI = row[7];
+      const propertyIRI = row[8];
+      const valueIRI = row[9];
 
       tableConfig.columns.push({
         name: columnName,
         description: propertyDescription,
         type: columnType,
         schemaType: columnSchemaType,
-        array : isArray,
-        codelist : isCodelist,
-        columnSubTypes : columnSubTypes
+        array: isArray,
+        codelist: isCodelist,
+        columnSubTypes: columnSubTypes,
+        classIRI: classIRI,
+        propertyIRI: propertyIRI,
+        valueIRI:valueIRI
       });
     });
 
@@ -108,9 +114,9 @@ const importTableConfigs = async (databaseName, tables, tablesDescription) => {
 
 // https://ourcodeworld.com/articles/read/608/how-to-camelize-and-decamelize-strings-in-javascript
 const camelize = (text) => {
-  return text.replace(/\W/, "-").replace(/^([A-Z])|[\s-_]+(\w)/g, function(match, p1, p2, offset) {
-      if (p2) return p2.toUpperCase();
-      return p1.toLowerCase();
+  return text.replace(/\W/, "-").replace(/^([A-Z])|[\s-_]+(\w)/g, function (match, p1, p2, offset) {
+    if (p2) return p2.toUpperCase();
+    return p1.toLowerCase();
   });
 };
 
@@ -163,16 +169,16 @@ const importConfigFiles = async ({ databaseName }) => {
 
     const name = row.table_schema === "public" ? row.table_name : `${row.table_schema}.${row.table_name}`;
 
-    if(tables[name]) {
-      tables[name].push([row.column_name, row.data_type, row.property_description, row.is_array, row.is_codelist, row.schema_type, row.data_type_subclasses]); 
+    if (tables[name]) {
+      tables[name].push([row.column_name, row.data_type, row.property_description, row.is_array, row.is_codelist, row.schema_type, row.data_type_subclasses, row.class_IRI, row.property_IRI, row.value_IRI]);
     } else {
-      tables[name] = [[row.column_name, row.data_type, row.property_description, row.is_array, row.is_codelist, row.schema_type, row.data_type_subclasses]];
+      tables[name] = [[row.column_name, row.data_type, row.property_description, row.is_array, row.is_codelist, row.schema_type, row.data_type_subclasses, row.class_IRI, row.property_IRI, row.value_IRI]];
     }
 
-    if(tablesDescription[name]) {
-      tablesDescription[name].push([row.table_description, row.table_schema, row.table_name]); 
+    if (tablesDescription[name]) {
+      tablesDescription[name].push([row.table_description, row.table_schema, row.table_name]);
     } else {
-      tablesDescription[name] = ([row.table_description, row.table_schema, row.table_name]); 
+      tablesDescription[name] = ([row.table_description, row.table_schema, row.table_name]);
     }
   });
 
@@ -186,18 +192,18 @@ const importConfigFiles = async ({ databaseName }) => {
 
 (async () => {
   const databaseName = process.argv[2];
-  if(!databaseName) {
+  if (!databaseName) {
     console.log("--> Provide a database name like 'npm run import foobar'");
     return;
   }
 
   const databaseConfigFolder = `src/config/databases/${databaseName}`;
   try {
-    if(await fs.stat(databaseConfigFolder)) {
+    if (await fs.stat(databaseConfigFolder)) {
       console.log(`⚠️  Folder ${databaseConfigFolder} already exists.`);
       return;
     }
-  } catch {}
+  } catch { }
 
   const readline = require("readline").createInterface({
     input: process.stdin,
@@ -205,7 +211,7 @@ const importConfigFiles = async ({ databaseName }) => {
   });
 
   readline.question("Do you want to import schema from a CSV file? y/n\n", async (answer) => {
-    if(answer.toLowerCase().includes("y")) {
+    if (answer.toLowerCase().includes("y")) {
       await importConfigFiles({ databaseName });
 
       console.log("Roger, everything is imported.");

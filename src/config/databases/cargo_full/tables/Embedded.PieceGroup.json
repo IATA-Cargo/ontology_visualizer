@@ -10,7 +10,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PieceGroup",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#dryIceWeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "pieceGroupGrossWeight",
@@ -19,7 +22,10 @@
       "schemaType": "Embedded",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PieceGroup",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceGroupGrossWeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
     },
     {
       "name": "pieceGroupCount",
@@ -28,7 +34,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PieceGroup",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceGroupCount",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
     },
     {
       "name": "pieceGroupId",
@@ -37,7 +46,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PieceGroup",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceGroupId",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
     }
   ]
 }

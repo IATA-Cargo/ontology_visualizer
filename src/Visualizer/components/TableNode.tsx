@@ -109,15 +109,21 @@ export const TableNode: FC<NodeProps> = ({ data }) => {
               </div>
               <div className={column.columnSubTypes ? "column-name__type subType" : "column-name__type"}
                 onClick={() => {
-                  window.requestAnimationFrame(() => {
+                  if(column.codelist){
+                    if(column.valueIRI){
+                      window.open(column.valueIRI, '_blank')?.focus();
+                    }                    
+                  } else {
+                    window.requestAnimationFrame(() => {
 
-                    const fitViewOptions: FitViewOptions = {
-                      duration: 500,
-                      nodes: [{ id: column.schemaType + '.' + column.type }]
-                    };
-
-                    reactFlowInstance.fitView(fitViewOptions);
-                  })
+                      const fitViewOptions: FitViewOptions = {
+                        duration: 500,
+                        nodes: [{ id: column.schemaType + '.' + column.type }]
+                      };
+  
+                      reactFlowInstance.fitView(fitViewOptions);
+                    })
+                  }
                 }}
               >
                 {column.type}{column.columnSubTypes ? '*' : ''}

@@ -6,47 +6,62 @@
     {
       "name": "currency",
       "description": "Preferred unit for currency",
-      "type": "CurrencyCode",
+      "type": "ccodes:CurrencyCode",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitsPreference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#currency",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#CurrencyCode"
     },
     {
       "name": "dimensionsUnit",
       "description": "Preferred unit for measurement and dimensions",
-      "type": "DimensionsUnitCode",
+      "type": "ccodes:DimensionsUnitCode",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitsPreference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#dimensionsUnit",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#DimensionsUnitCode"
     },
     {
       "name": "temperatureUnit",
       "description": "Preferred unit for temperature",
-      "type": "TemperatureUnitCode",
+      "type": "ccodes:TemperatureUnitCode",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitsPreference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#temperatureUnit",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#TemperatureUnitCode"
     },
     {
       "name": "volumeUnit",
       "description": "Preferred unit for volume",
-      "type": "VolumeUnitCode",
+      "type": "ccodes:VolumeUnitCode",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitsPreference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#volumeUnit",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#VolumeUnitCode"
     },
     {
       "name": "weightUnit",
       "description": "Preferred unit for weight",
-      "type": "WeightUnitCode",
+      "type": "ccodes:WeightUnitCode",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitsPreference",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#weightUnit",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#WeightUnitCode"
     }
   ]
 }

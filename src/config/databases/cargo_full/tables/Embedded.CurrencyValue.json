@@ -6,11 +6,14 @@
     {
       "name": "currencyUnit",
       "description": "Information about the currency used in a CurrencyValue. Create an instance of CurrencyCode based on ISO 4217",
-      "type": "CurrencyCode",
+      "type": "ccodes:CurrencyCode",
       "schemaType": "CodeList",
       "array": false,
       "codelist": true,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CurrencyValue",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#currencyUnit",
+      "valueIRI": "https://onerecord.iata.org/ns/coreCodeLists#CurrencyCode"
     },
     {
       "name": "numericalValue",
@@ -19,7 +22,10 @@
       "schemaType": "",
       "array": false,
       "codelist": false,
-      "columnSubTypes": ""
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CurrencyValue",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#numericalValue",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#double"
     }
   ]
 }
