@@ -1,0 +1,127 @@
+{
+  "schema": "Embedded",
+  "name": "LoosePiece",
+  "description": "LoosePiece details",
+  "columns": [
+    {
+      "name": "pieceHeight",
+      "description": "Height of a single piece",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceHeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "pieceLength",
+      "description": "Length of a single piece",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceLength",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "pieceWeight",
+      "description": "Weight of a single piece",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceWeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "pieceWidth",
+      "description": "Width of a single piece",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceWidth",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "dryIceWeight",
+      "description": "Weight of dry ice",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#dryIceWeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "pieceGroupGrossWeight",
+      "description": "Total gross weight of the piece group",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceGroupGrossWeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "stackable",
+      "description": "Stackable indicator for the pieces (boolean)",
+      "type": "boolean",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#stackable",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    {
+      "name": "turnable",
+      "description": "Turnable indicator for the pieces (boolean)",
+      "type": "boolean",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#turnable",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    {
+      "name": "pieceGroupCount",
+      "description": "Number of pieces in the piece group",
+      "type": "integer",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceGroupCount",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    {
+      "name": "pieceGroupId",
+      "description": "Identifier of the piece group; increasing integers",
+      "type": "integer",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoosePiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceGroupId",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  ]
+}

@@ -1,0 +1,849 @@
+[
+    {
+      "source": "Embedded.ActivitySequence",
+      "sourceKey": "activity",
+      "target": "Activity.UnitComposition",
+      "targetKey": "",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Embedded.ActivitySequence",
+      "sourceKey": "activity",
+      "target": "Activity.TransportMovement",
+      "targetKey": "",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Common.Answer",
+      "sourceKey": "question",
+      "target": "Common.Question",
+      "targetKey": "answer",
+      "relation": "hasOne"
+    },
+    {
+      "source": "BillingSettlement.BillingDetails",
+      "sourceKey": "detailedWaybill",
+      "target": "Core.Waybill",
+      "targetKey": "billingDetails",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Service.Booking",
+      "sourceKey": "bookingRequest",
+      "target": "Distribution.BookingRequest",
+      "targetKey": "booking",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Service.Booking",
+      "sourceKey": "issuedForWaybill",
+      "target": "Core.Waybill",
+      "targetKey": "referredBookingOption",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Service.Booking",
+      "sourceKey": "updateBookingOptionRequests",
+      "target": "Distribution.BookingOptionRequest",
+      "targetKey": "bookingToUpdate",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Service.Booking",
+      "sourceKey": "activitySequences",
+      "target": "Embedded.ActivitySequence",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
+        "source": "BillingSettlement.BillingDetails",
+        "sourceKey": "adjustments",
+        "target": "Embedded.Adjustments",
+        "targetKey": "",
+        "relation": "hasMany"
+      },
+    {
+      "source": "Distribution.BookingOption",
+      "sourceKey": "forBookingOptionRequest",
+      "target": "Distribution.BookingOptionRequest",
+      "targetKey": "bookingOptions",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.BookingOption",
+      "sourceKey": "forBookingRequest",
+      "target": "Distribution.BookingRequest",
+      "targetKey": "forBookingOption",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.BookingOption",
+      "sourceKey": "price",
+      "target": "Distribution.Price",
+      "targetKey": "forBookingOption",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.BookingOption",
+      "sourceKey": "bookingTimes",
+      "target": "Embedded.BookingTimes",
+      "targetKey": "",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.BookingOption",
+      "sourceKey": "carrierProduct",
+      "target": "Embedded.CarrierProduct",
+      "targetKey": "",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.BookingOption",
+      "sourceKey": "statusBookingOption",
+      "target": "Enum.BookingOptionStatus",
+      "targetKey": "",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.BookingOption",
+      "sourceKey": "unitsPreference",
+      "target": "Embedded.UnitsPreference",
+      "targetKey": "",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.BookingOption",
+      "sourceKey": "stationRemarks",
+      "target": "Embedded.StationRemarks",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Distribution.BookingOption",
+      "sourceKey": "transportLegs",
+      "target": "Distribution.TransportLegs",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Distribution.BookingOptionRequest",
+      "sourceKey": "bookingShipmentDetails",
+      "target": "Distribution.BookingShipment",
+      "targetKey": "forBookingOptionRequest",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.BookingOptionRequest",
+      "sourceKey": "bookingToUpdate",
+      "target": "Service.Booking",
+      "targetKey": "updateBookingOptionRequests",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.BookingOptionRequest",
+      "sourceKey": "bookingOptions",
+      "target": "Distribution.BookingOption",
+      "targetKey": "forBookingOptionRequest",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Distribution.BookingOptionRequest",
+      "sourceKey": "bookingPreference",
+      "target": "Embedded.BookingPreferences",
+      "targetKey": "",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.BookingOptionRequest",
+      "sourceKey": "carrierProduct",
+      "target": "Embedded.CarrierProduct",
+      "targetKey": "",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.BookingOptionRequest",
+      "sourceKey": "timePreferences",
+      "target": "Embedded.BookingTimes",
+      "targetKey": "",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.BookingOptionRequest",
+      "sourceKey": "unitsPreference",
+      "target": "Embedded.UnitsPreference",
+      "targetKey": "",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.BookingRequest",
+      "sourceKey": "booking",
+      "target": "Service.Booking",
+      "targetKey": "bookingRequest",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.BookingRequest",
+      "sourceKey": "forBookingOption",
+      "target": "Distribution.BookingOption",
+      "targetKey": "forBookingRequest",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.BookingShipment",
+      "sourceKey": "forBookingOptionRequest",
+      "target": "Distribution.BookingOptionRequest",
+      "targetKey": "bookingShipmentDetails",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.BookingShipment",
+      "sourceKey": "pieceGroups",
+      "target": "Embedded.PieceGroup",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Distribution.BookingShipment",
+      "sourceKey": "pieceGroups",
+      "target": "Embedded.LoosePiece",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Distribution.BookingShipment",
+      "sourceKey": "pieceGroups",
+      "target": "Embedded.ULDBasicPiece",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Distribution.BookingShipment",
+      "sourceKey": "pieceGroups",
+      "target": "Embedded.ULDSpecificPiece",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Distribution.BookingShipment",
+      "sourceKey": "pieceGroups",
+      "target": "Embedded.VolumePieceGroup",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.CO2Emissions",
+      "sourceKey": "calculationFor",
+      "target": "Activity.TransportMovement",
+      "targetKey": "co2Emissions",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Action.Check",
+      "sourceKey": "checkTotalResult",
+      "target": "Common.CheckTotalResult",
+      "targetKey": "resultOfCheck",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Action.Check",
+      "sourceKey": "usedTemplate",
+      "target": "Common.CheckTemplate",
+      "targetKey": "usedInCheck",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Common.CheckTemplate",
+      "sourceKey": "usedInCheck",
+      "target": "Action.Check",
+      "targetKey": "usedTemplate",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Common.CheckTemplate",
+      "sourceKey": "questions",
+      "target": "Common.Question",
+      "targetKey": "checkTemplate",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Common.CheckTotalResult",
+      "sourceKey": "resultOfCheck",
+      "target": "Action.Check",
+      "targetKey": "checkTotalResult",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Action.Composing",
+      "sourceKey": "servedActivity",
+      "target": "Activity.UnitComposition",
+      "targetKey": "compositionActions",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Action.Composing",
+      "sourceKey": "loadingUnit",
+      "target": "Core.ULD",
+      "targetKey": "involvedInActions",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Action.Composing",
+      "sourceKey": "composedPieces",
+      "target": "Core.Piece",
+      "targetKey": "involvedInActions",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.CustomsInformation",
+      "sourceKey": "issuedForPiece",
+      "target": "Core.Piece",
+      "targetKey": "customsInformation",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.CustomsInformation",
+      "sourceKey": "issuedForShipment",
+      "target": "Core.Shipment",
+      "targetKey": "customsInformation",
+      "relation": "hasOne"
+    },
+    {
+      "source": "DG.DgDeclaration",
+      "sourceKey": "issuedForPiece",
+      "target": "DG.PieceDg",
+      "targetKey": "dgDeclaration",
+      "relation": "hasOne"
+    },
+    {
+      "source": "DG.DgProductRadioactive",
+      "sourceKey": "forProductDg",
+      "target": "DG.ProductDg",
+      "targetKey": "dgRadioactiveMaterial",
+      "relation": "hasOne"
+    },
+    {
+      "source": "DG.DgProductRadioactive",
+      "sourceKey": "isotopes",
+      "target": "DG.DgRadioactiveIsotope",
+      "targetKey": "contentOfDgProductRadioactive",
+      "relation": "hasMany"
+    },
+    {
+      "source": "DG.DgRadioactiveIsotope",
+      "sourceKey": "contentOfDgProductRadioactive",
+      "target": "DG.DgProductRadioactive",
+      "targetKey": "isotopes",
+      "relation": "hasOne"
+    },
+    {
+      "source": "LiveAnimals.EpermitConsignment",
+      "sourceKey": "consignmentItems",
+      "target": "LiveAnimals.PieceLiveAnimals",
+      "targetKey": "associatedEpermit",
+      "relation": "hasOne"
+    },
+    {
+      "source": "LiveAnimals.EpermitConsignment",
+      "sourceKey": "epermit",
+      "target": "LiveAnimals.LiveAnimalsEpermit",
+      "targetKey": "consignments",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.Insurance",
+      "sourceKey": "insuredShipments",
+      "target": "Core.Shipment",
+      "targetKey": "insurance",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Common.IotDevice",
+      "sourceKey": "connectedSensors",
+      "target": "Common.Sensor",
+      "targetKey": "partOfIotDevice",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Item",
+      "sourceKey": "inPiece",
+      "target": "Core.Piece",
+      "targetKey": "containedItems",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.Item",
+      "sourceKey": "ofProduct",
+      "target": "DG.ProductDg",
+      "targetKey": "describedObjects",
+      "relation": "hasOne"
+    },
+    {
+      "source": "DG.ItemDg",
+      "sourceKey": "ofProduct",
+      "target": "Core.Product",
+      "targetKey": "describedObjects",
+      "relation": "hasOne"
+    },
+    {
+      "source": "DG.ItemDg",
+      "sourceKey": "inPiece",
+      "target": "DG.PieceDg",
+      "targetKey": "containedItems",
+      "relation": "hasOne"
+    },
+    {
+      "source": "LiveAnimals.LiveAnimalsEpermit",
+      "sourceKey": "consignments",
+      "target": "LiveAnimals.EpermitConsignment",
+      "targetKey": "epermit",
+      "relation": "hasMany"
+    },
+    {
+      "source": "LiveAnimals.LiveAnimalsEpermit",
+      "sourceKey": "signatures",
+      "target": "LiveAnimals.EpermitSignature",
+      "targetKey": "forEpermit",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Action.Loading",
+      "sourceKey": "servedActivity",
+      "target": "Activity.TransportMovement",
+      "targetKey": "loadingActions",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Action.Loading",
+      "sourceKey": "loadedPieces",
+      "target": "Core.Piece",
+      "targetKey": "involvedInActions",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Action.Loading",
+      "sourceKey": "loadedUnits",
+      "target": "Common.LoadingUnit",
+      "targetKey": "involvedInActions",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.PackagingType",
+      "sourceKey": "appliedOnPieces",
+      "target": "Core.Piece",
+      "targetKey": "packagingType",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Piece",
+      "sourceKey": "inPiece",
+      "target": "Core.Piece",
+      "targetKey": "containedPieces",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.Piece",
+      "sourceKey": "ofShipment",
+      "target": "Core.Shipment",
+      "targetKey": "pieces",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.Piece",
+      "sourceKey": "packagingType",
+      "target": "Core.PackagingType",
+      "targetKey": "appliedOnPieces",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.Piece",
+      "sourceKey": "containedItems",
+      "target": "Core.Item",
+      "targetKey": "inPiece",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Piece",
+      "sourceKey": "containedPieces",
+      "target": "Core.Piece",
+      "targetKey": "inPiece",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Piece",
+      "sourceKey": "contentProducts",
+      "target": "Core.Product",
+      "targetKey": "describedObjects",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Piece",
+      "sourceKey": "customsInformation",
+      "target": "Core.CustomsInformation",
+      "targetKey": "issuedForPiece",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Piece",
+      "sourceKey": "securityDeclarations",
+      "target": "Core.SecurityDeclaration",
+      "targetKey": "issuedForPiece",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Piece",
+      "sourceKey": "involvedInActions",
+      "target": "Action.Composing",
+      "targetKey": "composedPieces",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Piece",
+      "sourceKey": "involvedInActions",
+      "target": "Action.Loading",
+      "targetKey": "loadedPieces",
+      "relation": "hasMany"
+    },
+    {
+      "source": "DG.PieceDg",
+      "sourceKey": "dgDeclaration",
+      "target": "DG.DgDeclaration",
+      "targetKey": "issuedForPiece",
+      "relation": "hasOne"
+    },
+    {
+      "source": "DG.PieceDg",
+      "sourceKey": "containedPieces",
+      "target": "DG.PieceDg",
+      "targetKey": "inPiece",
+      "relation": "hasMany"
+    },
+    {
+      "source": "DG.PieceDg",
+      "sourceKey": "containedItems",
+      "target": "DG.ItemDg",
+      "targetKey": "inPiece",
+      "relation": "hasMany"
+    },
+    {
+      "source": "DG.PieceDg",
+      "sourceKey": "contentProducts",
+      "target": "DG.ProductDg",
+      "targetKey": "describedObjects",
+      "relation": "hasMany"
+    },
+    {
+      "source": "LiveAnimals.PieceLiveAnimals",
+      "sourceKey": "associatedEpermit",
+      "target": "LiveAnimals.EpermitConsignment",
+      "targetKey": "consignmentItems",
+      "relation": "hasOne"
+    },
+    {
+      "source": "LiveAnimals.PieceLiveAnimals",
+      "sourceKey": "inPiece",
+      "target": "LiveAnimals.PieceLiveAnimals",
+      "targetKey": "containedPieces",
+      "relation": "hasOne"
+    },
+    {
+      "source": "LiveAnimals.PieceLiveAnimals",
+      "sourceKey": "containedPieces",
+      "target": "LiveAnimals.PieceLiveAnimals",
+      "targetKey": "inPiece",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Distribution.Price",
+      "sourceKey": "forBookingOption",
+      "target": "Distribution.BookingOption",
+      "targetKey": "price",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.Price",
+      "sourceKey": "ratings",
+      "target": "Distribution.Ratings",
+      "targetKey": "forPrices",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Product",
+      "sourceKey": "describedObjects",
+      "target": "Core.Piece",
+      "targetKey": "contentProducts",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Product",
+      "sourceKey": "describedObjects",
+      "target": "Core.Item",
+      "targetKey": "ofProduct",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Product",
+      "sourceKey": "otherCharacteristics",
+      "target": "Embedded.Characteristic",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
+      "source": "DG.ProductDg",
+      "sourceKey": "dgRadioactiveMaterial",
+      "target": "DG.DgProductRadioactive",
+      "targetKey": "forProductDg",
+      "relation": "hasOne"
+    },
+    {
+      "source": "DG.ProductDg",
+      "sourceKey": "describedObjects",
+      "target": "DG.PieceDg",
+      "targetKey": "contentProducts",
+      "relation": "hasMany"
+    },
+    {
+      "source": "DG.ProductDg",
+      "sourceKey": "describedObjects",
+      "target": "DG.ItemDg",
+      "targetKey": "ofProduct",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Common.Question",
+      "sourceKey": "answer",
+      "target": "Common.Answer",
+      "targetKey": "question",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Common.Question",
+      "sourceKey": "checkTemplate",
+      "target": "Common.CheckTemplate",
+      "targetKey": "questions",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Distribution.Ratings",
+      "sourceKey": "forPrices",
+      "target": "Distribution.Price",
+      "targetKey": "ratings",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Distribution.Ratings",
+      "sourceKey": "ranges",
+      "target": "Embedded.Ranges",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.SecurityDeclaration",
+      "sourceKey": "issuedForPiece",
+      "target": "Core.Piece",
+      "targetKey": "securityDeclarations",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.SecurityDeclaration",
+      "sourceKey": "receivedFrom",
+      "target": "Embedded.RegulatedEntity",
+      "targetKey": "",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.SecurityDeclaration",
+      "sourceKey": "regulatedEntityAcceptor",
+      "target": "Embedded.RegulatedEntity",
+      "targetKey": "",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.SecurityDeclaration",
+      "sourceKey": "regulatedEntityIssuer",
+      "target": "Embedded.RegulatedEntity",
+      "targetKey": "",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Common.Sensor",
+      "sourceKey": "partOfIotDevice",
+      "target": "Common.IotDevice",
+      "targetKey": "connectedSensors",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Common.Sensor",
+      "sourceKey": "measurements",
+      "target": "Embedded.Measurement",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Shipment",
+      "sourceKey": "insurance",
+      "target": "Core.Insurance",
+      "targetKey": "insuredShipments",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.Shipment",
+      "sourceKey": "waybill",
+      "target": "Core.Waybill",
+      "targetKey": "shipment",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.Shipment",
+      "sourceKey": "customsInformation",
+      "target": "Core.CustomsInformation",
+      "targetKey": "issuedForShipment",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Shipment",
+      "sourceKey": "pieces",
+      "target": "Core.Piece",
+      "targetKey": "ofShipment",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Action.Storing",
+      "sourceKey": "servedActivity",
+      "target": "Activity.Storage",
+      "targetKey": "storingActions",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.TransportMeans",
+      "sourceKey": "operatedTransportMovement",
+      "target": "Activity.TransportMovement",
+      "targetKey": "operatingTransportMeans",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Activity.TransportMovement",
+      "sourceKey": "operatingTransportMeans",
+      "target": "Core.TransportMeans",
+      "targetKey": "operatedTransportMovement",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Activity.TransportMovement",
+      "sourceKey": "co2Emissions",
+      "target": "Core.CO2Emissions",
+      "targetKey": "calculationFor",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Activity.TransportMovement",
+      "sourceKey": "loadingActions",
+      "target": "Action.Loading",
+      "targetKey": "servedActivity",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Activity.TransportMovement",
+      "sourceKey": "movementTimes",
+      "target": "Embedded.MovementTime",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Activity.TransportMovement",
+      "sourceKey": "servedServices",
+      "target": "Service.Booking",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.ULD",
+      "sourceKey": "inUnitComposition",
+      "target": "Activity.UnitComposition",
+      "targetKey": "loadingUnit",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.ULD",
+      "sourceKey": "involvedInActions",
+      "target": "Action.Loading",
+      "targetKey": "loadedUnits",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Activity.UnitComposition",
+      "sourceKey": "loadingUnit",
+      "target": "Core.ULD",
+      "targetKey": "inUnitComposition",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Activity.UnitComposition",
+      "sourceKey": "compositionActions",
+      "target": "Action.Composing",
+      "targetKey": "servedActivity",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Activity.UnitComposition",
+      "sourceKey": "servedServices",
+      "target": "Service.Booking",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Waybill",
+      "sourceKey": "billingDetails",
+      "target": "BillingSettlement.BillingDetails",
+      "targetKey": "detailedWaybill",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.Waybill",
+      "sourceKey": "masterWaybill",
+      "target": "Core.Waybill",
+      "targetKey": "houseWaybills",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.Waybill",
+      "sourceKey": "referredBookingOption",
+      "target": "Service.Booking",
+      "targetKey": "issuedForWaybill",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.Waybill",
+      "sourceKey": "shipment",
+      "target": "Core.Shipment",
+      "targetKey": "waybill",
+      "relation": "hasOne"
+    },
+    {
+      "source": "Core.Waybill",
+      "sourceKey": "houseWaybills",
+      "target": "Core.Waybill",
+      "targetKey": "masterWaybill",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Waybill",
+      "sourceKey": "otherCharges",
+      "target": "Embedded.OtherCharge",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Waybill",
+      "sourceKey": "waybillLineItems",
+      "target": "Embedded.WaybillLineItem",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
+      "source": "Core.Waybill",
+      "sourceKey": "accountingNotes",
+      "target": "Embedded.AccountingNote",
+      "targetKey": "",
+      "relation": "hasMany"
+    }
+   ]

@@ -1,0 +1,103 @@
+{
+  "schema": "Embedded",
+  "name": "Address",
+  "description": "Address details",
+  "columns": [
+    {
+      "name": "addressCode",
+      "description": "Address identifier using special coding systems e.g. US CBP FIRMS code",
+      "type": "CodeListElement",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Address",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#addressCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
+    },
+    {
+      "name": "cityCode",
+      "description": "UN/LOCODE city code (5 letter) or IATA city code (3 letter)",
+      "type": "CodeListElement",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Address",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#cityCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
+    },
+    {
+      "name": "country",
+      "description": "Country details. Refer ISO 3166-2",
+      "type": "CodeListElement",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Address",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#country",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
+    },
+    {
+      "name": "postalCode",
+      "description": "Postal / ZIP code",
+      "type": "CodeListElement",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Address",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#postalCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
+    },
+    {
+      "name": "regionCode",
+      "description": "Region/ State / Department. Refer ISO 3166-2",
+      "type": "CodeListElement",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Address",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#regionCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
+    },
+    {
+      "name": "postOfficeBox",
+      "description": "Post Office box number / code",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Address",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#postOfficeBox",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "textualPostCode",
+      "description": "Postal / ZIP code",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Address",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#textualPostCode",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "streetAddressLines",
+      "description": "Street address including street name; street number; building number; apartment etc",
+      "type": "string",
+      "schemaType": "",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Address",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#streetAddressLines",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "schema": "Event",
+  "name": "LogisticsEvent",
+  "description": "Event details",
+  "columns": [
+    {
+      "name": "eventCode",
+      "description": "Movement or milestone code. Can hold a named individual of the StatusCode core code list (corresponding to cXML code list 1.18); but can also be referring to different code lists.",
+      "type": "CodeListElement",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#eventCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
+    },
+    {
+      "name": "eventFor",
+      "description": "Refers to the URI of the linked object(s)",
+      "type": "LogisticsObject",
+      "schemaType": "Abstract",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "LogisticsActivity|Answer|Actor|Piece|Location|EpermitConsignment|Organization|IotDevice|PhysicalLogisticsObject|BillingDetails|Booking|BookingOption|BookingRequest|BookingShipment|Carrier|Person|Check|CheckTemplate|CheckTotalResult|CO2Emissions|LoadingMaterial|Composing|Sensor|PieceLiveAnimals|Item|DgProductRadioactive|Product|CustomsInformation|Waybill|DgDeclaration|ExternalReference|LiveAnimalsEpermit|BookingOptionRequest|Price|ProductDg|UnitComposition|Insurance|Shipment|LogisticsAction|DgRadioactiveIsotope|LoadingUnit|Loading|TransportMeans|TransportMovement|Company|PackagingType|LogisticsAgent|Question|Ratings|SecurityDeclaration|LogisticsService|EpermitSignature|Storing|TransportLegs|PieceDg|ItemDg|NonHumanActor|PublicAuthority|Storage|ULD",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#eventFor",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsObject"
+    },
+    {
+      "name": "eventLocation",
+      "description": "Location of event",
+      "type": "Location",
+      "schemaType": "Common",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#eventLocation",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Location"
+    },
+    {
+      "name": "eventTimeType",
+      "description": "Indicates type of event e.g.  Scheduled; Estimated; Actual",
+      "type": "EventTimeType",
+      "schemaType": "Enum",
+      "array": false,
+      "codelist": true,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#eventTimeType",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#EventTimeType"
+    },
+    {
+      "name": "recordingActor",
+      "description": "Reference to the Actor recording the LogisticsEvent",
+      "type": "Actor",
+      "schemaType": "Agent",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "Person|NonHumanActor",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#recordingActor",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Actor"
+    },
+    {
+      "name": "recordingOrganization",
+      "description": "Organization recording the LogisticsEvent",
+      "type": "Organization",
+      "schemaType": "Agent",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "Carrier|Company|PublicAuthority",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#recordingOrganization",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Organization"
+    },
+    {
+      "name": "externalReferences",
+      "description": "References to all associated ExternalReferences",
+      "type": "ExternalReference",
+      "schemaType": "Common",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
+    },
+    {
+      "name": "creationDate",
+      "description": "DateTime at which the LogisticsEvent was posted",
+      "type": "dateTime",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#creationDate",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    {
+      "name": "eventDate",
+      "description": "Date and time of the event",
+      "type": "dateTime",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#eventDate",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    {
+      "name": "eventName",
+      "description": "If no EventCode provided; event name - e.g. Security clearance",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#eventName",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "partialEventIndicator",
+      "description": "Boolean indicating that the LogisticsEvent is only applicable for parts of the LogisticObject it was recorded for; for example for some Pieces of a Shipment",
+      "type": "boolean",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#partialEventIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
+    }
+  ]
+}

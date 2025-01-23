@@ -1,0 +1,374 @@
+{
+  "Abstract.LogisticsAction": {
+    "x": -832,
+    "y": -416
+  },
+  "Abstract.LogisticsActivity": {
+    "x": -1120,
+    "y": -416
+  },
+  "Abstract.LogisticsAgent": {
+    "x": -1696,
+    "y": -416
+  },
+  "Abstract.LogisticsObject": {
+    "x": -1984,
+    "y": -592
+  },
+  "Abstract.LogisticsService": {
+    "x": -1408,
+    "y": -416
+  },
+  "Abstract.PhysicalLogisticsObject": {
+    "x": -1984,
+    "y": -416
+  },
+  "Action.Check": {
+    "x": -1984,
+    "y": 1760
+  },
+  "Action.Composing": {
+    "x": -544,
+    "y": 512
+  },
+  "Action.Loading": {
+    "x": 432,
+    "y": 512
+  },
+  "Action.Storing": {
+    "x": -1984,
+    "y": 2560
+  },
+  "Activity.Storage": {
+    "x": -1680,
+    "y": 2496
+  },
+  "Activity.TransportMovement": {
+    "x": 752,
+    "y": 96
+  },
+  "Activity.UnitComposition": {
+    "x": -240,
+    "y": 128
+  },
+  "Agent.Actor": {
+    "x": -1984,
+    "y": 528
+  },
+  "Agent.Carrier": {
+    "x": -1120,
+    "y": -16
+  },
+  "Agent.Company": {
+    "x": -1408,
+    "y": -16
+  },
+  "Agent.NonHumanActor": {
+    "x": -1408,
+    "y": 528
+  },
+  "Agent.Organization": {
+    "x": -1984,
+    "y": -16
+  },
+  "Agent.Person": {
+    "x": -1696,
+    "y": 528
+  },
+  "Agent.PublicAuthority": {
+    "x": -1696,
+    "y": -16
+  },
+  "BillingSettlement.BillingDetails": {
+    "x": 2304,
+    "y": -128
+  },
+  "Common.Answer": {
+    "x": -1360,
+    "y": 2144
+  },
+  "Common.CheckTemplate": {
+    "x": -1680,
+    "y": 1760
+  },
+  "Common.CheckTotalResult": {
+    "x": -1664,
+    "y": 2144
+  },
+  "Common.ExternalReference": {
+    "x": -1984,
+    "y": 1168
+  },
+  "Common.IotDevice": {
+    "x": -1984,
+    "y": 3072
+  },
+  "Common.LoadingMaterial": {
+    "x": -1696,
+    "y": 1168
+  },
+  "Common.LoadingUnit": {
+    "x": -2272,
+    "y": 1168
+  },
+  "Common.Location": {
+    "x": -1408,
+    "y": 1168
+  },
+  "Common.Question": {
+    "x": -1360,
+    "y": 1760
+  },
+  "Common.Sensor": {
+    "x": -1664,
+    "y": 3072
+  },
+  "Core.CO2Emissions": {
+    "x": 208,
+    "y": 0
+  },
+  "Core.CustomsInformation": {
+    "x": 640,
+    "y": 1472
+  },
+  "Core.Insurance": {
+    "x": 1472,
+    "y": 992
+  },
+  "Core.Item": {
+    "x": -704,
+    "y": 1136
+  },
+  "Core.PackagingType": {
+    "x": 640,
+    "y": 1200
+  },
+  "Core.Piece": {
+    "x": 64,
+    "y": 1056
+  },
+  "Core.Product": {
+    "x": -400,
+    "y": 1568
+  },
+  "Core.SecurityDeclaration": {
+    "x": 624,
+    "y": 1920
+  },
+  "Core.Shipment": {
+    "x": 1472,
+    "y": 1264
+  },
+  "Core.TransportMeans": {
+    "x": 1136,
+    "y": 176
+  },
+  "Core.ULD": {
+    "x": 80,
+    "y": 320
+  },
+  "Core.Waybill": {
+    "x": 1568,
+    "y": -128
+  },
+  "DG.DgDeclaration": {
+    "x": 432,
+    "y": 3520
+  },
+  "DG.DgProductRadioactive": {
+    "x": -832,
+    "y": 3376
+  },
+  "DG.DgRadioactiveIsotope": {
+    "x": -880,
+    "y": 3712
+  },
+  "DG.ItemDg": {
+    "x": -816,
+    "y": 2592
+  },
+  "DG.PieceDg": {
+    "x": 64,
+    "y": 2592
+  },
+  "DG.ProductDg": {
+    "x": -464,
+    "y": 2928
+  },
+  "Distribution.BookingOption": {
+    "x": 3520,
+    "y": -592
+  },
+  "Distribution.BookingOptionRequest": {
+    "x": 2768,
+    "y": -448
+  },
+  "Distribution.BookingRequest": {
+    "x": 1584,
+    "y": -656
+  },
+  "Distribution.BookingShipment": {
+    "x": 2736,
+    "y": 256
+  },
+  "Distribution.Price": {
+    "x": 3520,
+    "y": 0
+  },
+  "Distribution.Ratings": {
+    "x": 3520,
+    "y": 288
+  },
+  "Distribution.TransportLegs": {
+    "x": 3904,
+    "y": -208
+  },
+  "Embedded.AccountingNote": {
+    "x": 1968,
+    "y": 448
+  },
+  "Embedded.ActivitySequence": {
+    "x": 304,
+    "y": -128
+  },
+  "Embedded.Address": {
+    "x": -1632,
+    "y": 3920
+  },
+  "Embedded.Adjustments": {
+    "x": 2304,
+    "y": 464
+  },
+  "Embedded.BookingPreferences": {
+    "x": 2752,
+    "y": 0
+  },
+  "Embedded.BookingTimes": {
+    "x": 3136,
+    "y": -128
+  },
+  "Embedded.CarrierProduct": {
+    "x": 3120,
+    "y": -304
+  },
+  "Embedded.Characteristic": {
+    "x": -608,
+    "y": 1904
+  },
+  "Embedded.CodeListElement": {
+    "x": -2016,
+    "y": 3680
+  },
+  "Embedded.ContactDetail": {
+    "x": -2016,
+    "y": 4144
+  },
+  "Embedded.CurrencyValue": {
+    "x": -1632,
+    "y": 3680
+  },
+  "Embedded.Dimensions": {
+    "x": -1760,
+    "y": 4016
+  },
+  "Embedded.Geolocation": {
+    "x": -1632,
+    "y": 3792
+  },
+  "Embedded.LoosePiece": {
+    "x": 2736,
+    "y": 912
+  },
+  "Embedded.Measurement": {
+    "x": -1664,
+    "y": 3472
+  },
+  "Embedded.MovementTime": {
+    "x": 1136,
+    "y": 640
+  },
+  "Embedded.OtherCharge": {
+    "x": 1952,
+    "y": -32
+  },
+  "Embedded.OtherIdentifier": {
+    "x": -1824,
+    "y": 3792
+  },
+  "Embedded.Party": {
+    "x": -2016,
+    "y": 4016
+  },
+  "Embedded.PieceGroup": {
+    "x": 2736,
+    "y": 736
+  },
+  "Embedded.Ranges": {
+    "x": 3840,
+    "y": 624
+  },
+  "Embedded.RegulatedEntity": {
+    "x": 1056,
+    "y": 2000
+  },
+  "Embedded.StationRemarks": {
+    "x": 3920,
+    "y": -400
+  },
+  "Embedded.TemperatureInstructions": {
+    "x": -2016,
+    "y": 3904
+  },
+  "Embedded.ULDBasicPiece": {
+    "x": 2736,
+    "y": 1472
+  },
+  "Embedded.ULDSpecificPiece": {
+    "x": 2736,
+    "y": 1696
+  },
+  "Embedded.UnitsPreference": {
+    "x": 3120,
+    "y": 64
+  },
+  "Embedded.Value": {
+    "x": -1632,
+    "y": 4160
+  },
+  "Embedded.VolumePieceGroup": {
+    "x": 2736,
+    "y": 1248
+  },
+  "Embedded.VolumetricWeight": {
+    "x": -1824,
+    "y": 3680
+  },
+  "Embedded.WaybillLineItem": {
+    "x": 1968,
+    "y": 560
+  },
+  "Event.LogisticsEvent": {
+    "x": -2288,
+    "y": -592
+  },
+  "LiveAnimals.EpermitConsignment": {
+    "x": 1120,
+    "y": 2560
+  },
+  "LiveAnimals.EpermitSignature": {
+    "x": 1120,
+    "y": 2864
+  },
+  "LiveAnimals.LiveAnimalsEpermit": {
+    "x": 1424,
+    "y": 2560
+  },
+  "LiveAnimals.PieceLiveAnimals": {
+    "x": 720,
+    "y": 2576
+  },
+  "Service.Booking": {
+    "x": 1088,
+    "y": -448
+  }
+}

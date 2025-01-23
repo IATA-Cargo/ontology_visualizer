@@ -1,0 +1,31 @@
+{
+  "schema": "Embedded",
+  "name": "StationRemarks",
+  "description": "StationRemarks details",
+  "columns": [
+    {
+      "name": "station",
+      "description": "Reference to the station (Airport); mandatory ",
+      "type": "Location",
+      "schemaType": "Common",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#StationRemarks",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#station",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Location"
+    },
+    {
+      "name": "remarksText",
+      "description": "Details of the remarks; mandatory",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#StationRemarks",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#remarksText",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  ]
+}

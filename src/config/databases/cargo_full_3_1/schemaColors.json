@@ -1,0 +1,16 @@
+{
+  "DEFAULT": "#BCCEF5",
+  "Embedded": "#D0D0D0",
+  "Core": "#BCCEF5",
+  "Abstract": "#F8D8C3",
+  "Service": "#FBE187",
+  "Common": "#DCD9F8",
+  "Activity": "#A9E6E3",
+  "Event": "#C19694",
+  "Action": "#A2EDCD",
+  "BillingSettlement": "#C5D084",
+  "Distribution": "#78A471",
+  "Agent": "#E6BEDD",
+  "DG": "#FFA8B8",
+  "LiveAnimals": "#D2C897"
+  }

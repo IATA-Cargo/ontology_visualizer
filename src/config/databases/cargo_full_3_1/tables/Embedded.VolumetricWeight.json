@@ -1,0 +1,31 @@
+{
+  "schema": "Embedded",
+  "name": "VolumetricWeight",
+  "description": "Volumetric weight details",
+  "columns": [
+    {
+      "name": "chargeableWeight",
+      "description": "Chargeable weight",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#VolumetricWeight",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#chargeableWeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "conversionFactor",
+      "description": "Volume to weight conversion factor",
+      "type": "double",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#VolumetricWeight",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#conversionFactor",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#double"
+    }
+  ]
+}

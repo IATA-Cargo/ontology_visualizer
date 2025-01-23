@@ -1,10 +1,14 @@
 {
+  "cargo_full_3_1": {
+    "name": "ONE Record Full Datamodel 3.1",
+    "description": "Visualization of the full ONE Record Data Model 3.1"
+  },
   "cargo_full": {
-    "name": "ONE Record Full Datamodel",
-    "description": "Prototype  visualization of the classes of the full ONE Record Data Model 3.0.1"
+    "name": "ONE Record Full Datamodel 3.0.1 (deprecated)",
+    "description": "Visualization of the classes of the full ONE Record Data Model 3.0.1"
   },
   "cargo_core": {
-    "name": "ONE Record Conceptual Datamodel",
-    "description": "Prototype reduced visualization of the classes of the conceptual ONE Record Data Model 3.0.1"
+    "name": "ONE Record Conceptual Datamodel (deprecated)",
+    "description": "Reduced visualization of the classes of the conceptual ONE Record Data Model 3.0.1"
   }
 }
