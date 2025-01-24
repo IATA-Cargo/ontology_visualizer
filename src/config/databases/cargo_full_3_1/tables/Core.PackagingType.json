@@ -1,0 +1,91 @@
+{
+  "schema": "Core",
+  "name": "PackagingType",
+  "description": "Packaging details ",
+  "columns": [
+    {
+      "name": "checks",
+      "description": "References to the CheckActions performed on the object",
+      "type": "Check",
+      "schemaType": "Action",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PackagingType",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
+    },
+    {
+      "name": "externalReferences",
+      "description": "References to all associated ExternalReferences",
+      "type": "ExternalReference",
+      "schemaType": "Common",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PackagingType",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
+    },
+    {
+      "name": "appliedOnPieces",
+      "description": "Piece on which the Packaging type is applicable",
+      "type": "Piece",
+      "schemaType": "Core",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "PieceLiveAnimals|PieceDg",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PackagingType",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#appliedOnPieces",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Piece"
+    },
+    {
+      "name": "typeCode",
+      "description": "Packaging type identifier as per UNECE Rec 21 Annex V and VI e.g. 1A - Drum; steel - Packaging material code. Identifies the Logistic Unit package type. UN Recommendation on Transport of Dangerous Goods; Model Regulations ",
+      "type": "CodeListElement",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PackagingType",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#typeCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
+    },
+    {
+      "name": "events",
+      "description": "Events object",
+      "type": "LogisticsEvent",
+      "schemaType": "Event",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PackagingType",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
+    },
+    {
+      "name": "skeletonIndicator",
+      "description": "Indicator whether a logistics object is a skeleton object",
+      "type": "boolean",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PackagingType",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    {
+      "name": "description",
+      "description": "Natural language description if required",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#PackagingType",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#description",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  ]
+}

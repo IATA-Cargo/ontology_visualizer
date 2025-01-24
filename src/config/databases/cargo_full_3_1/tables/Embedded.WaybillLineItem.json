@@ -1,0 +1,115 @@
+{
+  "schema": "Embedded",
+  "name": "WaybillLineItem",
+  "description": "Information from AWB Rate Description section as per bullet point 18 - data elements 22A - 22Z from AWB. Data describing Piece and Package parameters to be transmitted per Piece object using pieceReferences",
+  "columns": [
+    {
+      "name": "rateCharge",
+      "description": "TACT Rate for rate description details",
+      "type": "CurrencyValue",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#WaybillLineItem",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#rateCharge",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CurrencyValue"
+    },
+    {
+      "name": "rateClassCode",
+      "description": "Rate Surcharge/Reduction - Basic Rate Class Code",
+      "type": "RateClassCode",
+      "schemaType": "CodeList",
+      "array": false,
+      "codelist": true,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#WaybillLineItem",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#rateClassCode",
+      "valueIRI": "https://onerecord.iata.org/ns/code-lists/RateClassCode"
+    },
+    {
+      "name": "rateClassCodeBasic",
+      "description": "Rate Surcharge/Reduction - Basic Rate Class Code",
+      "type": "BasicRateClassCode",
+      "schemaType": "CodeList",
+      "array": false,
+      "codelist": true,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#WaybillLineItem",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#rateClassCodeBasic",
+      "valueIRI": "https://onerecord.iata.org/ns/code-lists/BasicRateClassCode"
+    },
+    {
+      "name": "ratePercentage",
+      "description": "Rate Surcharge/Reduction - Percentage of  red. / surcharge",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#WaybillLineItem",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#ratePercentage",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "rcp",
+      "description": "IATA 3-letter city code of the rate combination point as defined in TACT",
+      "type": "CodeListElement",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#WaybillLineItem",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#rcp",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
+    },
+    {
+      "name": "uldRateClassType",
+      "description": "ULD Rate information - ULD Rate Class Type",
+      "type": "CodeListElement",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#WaybillLineItem",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#uldRateClassType",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
+    },
+    {
+      "name": "pieceReferences",
+      "description": "References to Pieces for which a rate applies",
+      "type": "Piece",
+      "schemaType": "Core",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#WaybillLineItem",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Piece"
+    },
+    {
+      "name": "uldReferences",
+      "description": "References to ULDs for which the rate applies",
+      "type": "ULD",
+      "schemaType": "Core",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#WaybillLineItem",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#uldReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ULD"
+    },
+    {
+      "name": "lineItemNumber",
+      "description": "Number of the line item",
+      "type": "integer",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#WaybillLineItem",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#lineItemNumber",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  ]
+}

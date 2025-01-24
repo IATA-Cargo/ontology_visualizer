@@ -1,0 +1,31 @@
+{
+  "schema": "Embedded",
+  "name": "ActivitySequence",
+  "description": "Embedded object to create a sequence of Activities in the context of a Service",
+  "columns": [
+    {
+      "name": "activity",
+      "description": "Reference to the Activity that is performed as part of a Service",
+      "type": "LogisticsActivity",
+      "schemaType": "Abstract",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "UnitComposition|TransportMovement|Storage",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ActivitySequence",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#activity",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsActivity"
+    },
+    {
+      "name": "sequenceNumber",
+      "description": "Short text to detail sequence number (alphanumeric)",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ActivitySequence",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#sequenceNumber",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  ]
+}

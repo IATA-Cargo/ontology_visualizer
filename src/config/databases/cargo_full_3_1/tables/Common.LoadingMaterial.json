@@ -1,0 +1,151 @@
+{
+  "schema": "Common",
+  "name": "LoadingMaterial",
+  "description": "LoadingMaterial describes transportable; complementary non-Piece objects such as dry ice or nets",
+  "columns": [
+    {
+      "name": "manufacturer",
+      "description": "Manufacturing company details and contacts",
+      "type": "Organization",
+      "schemaType": "Agent",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "Carrier|Company|PublicAuthority",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoadingMaterial",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#manufacturer",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Organization"
+    },
+    {
+      "name": "checks",
+      "description": "References to the CheckActions performed on the object",
+      "type": "Check",
+      "schemaType": "Action",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoadingMaterial",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
+    },
+    {
+      "name": "externalReferences",
+      "description": "References to all associated ExternalReferences",
+      "type": "ExternalReference",
+      "schemaType": "Common",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoadingMaterial",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
+    },
+    {
+      "name": "attachedIotDevices",
+      "description": "References to all connected IotDevices",
+      "type": "IotDevice",
+      "schemaType": "Common",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoadingMaterial",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#attachedIotDevices",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#IotDevice"
+    },
+    {
+      "name": "otherIdentifiers",
+      "description": "Details about any other identifier; depending on the context of use",
+      "type": "OtherIdentifier",
+      "schemaType": "Embedded",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoadingMaterial",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#otherIdentifiers",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#OtherIdentifier"
+    },
+    {
+      "name": "description",
+      "description": "Natural language description if required",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoadingMaterial",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#description",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "materialModel",
+      "description": "Model of the LoadingMaterial if any",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoadingMaterial",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#materialModel",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "materialType",
+      "description": "Type of the LoadingMaterial",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoadingMaterial",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#materialType",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "serialNumber",
+      "description": "Serial number that allows to uniquely identify the object",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoadingMaterial",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#serialNumber",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "events",
+      "description": "Events object",
+      "type": "LogisticsEvent",
+      "schemaType": "Event",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoadingMaterial",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
+    },
+    {
+      "name": "skeletonIndicator",
+      "description": "Indicator whether a logistics object is a skeleton object",
+      "type": "boolean",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoadingMaterial",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    {
+      "name": "involvedInActions",
+      "description": "References to the Actions the object is involved in",
+      "type": "LogisticsAction",
+      "schemaType": "Abstract",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "Check|Composing|Loading|Storing",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LoadingMaterial",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#involvedInActions",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction"
+    }
+  ]
+}

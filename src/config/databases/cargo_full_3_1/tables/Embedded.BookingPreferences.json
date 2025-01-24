@@ -1,0 +1,79 @@
+{
+  "schema": "Embedded",
+  "name": "BookingPreferences",
+  "description": "BookingPreferences details",
+  "columns": [
+    {
+      "name": "aircraftPossibilityCode",
+      "description": "Type of aircraft to be used if any specific requirements (e.g. Pure freighter; etc.)",
+      "type": "AircraftPossibilityCode",
+      "schemaType": "CodeList",
+      "array": false,
+      "codelist": true,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingPreferences",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#aircraftPossibilityCode",
+      "valueIRI": "https://onerecord.iata.org/ns/code-lists/AircraftPossibilityCode"
+    },
+    {
+      "name": "excludedViaPoints",
+      "description": "Locations of excluded Via Points",
+      "type": "Location",
+      "schemaType": "Common",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingPreferences",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#excludedViaPoints",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Location"
+    },
+    {
+      "name": "includedViaPoints",
+      "description": "Locations or stations to included in the routing",
+      "type": "Location",
+      "schemaType": "Common",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingPreferences",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#includedViaPoints",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Location"
+    },
+    {
+      "name": "maxSegments",
+      "description": "Maximum number of segments for the transportation of the goods. 1 means direct flight",
+      "type": "integer",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingPreferences",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#maxSegments",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    {
+      "name": "preferredTransportId",
+      "description": "When part of the Request it refers to the preferred Transport ID from the customer. When part of the BookingOption (offer or actual booking) it refers to the expected Transport ID or flight",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingPreferences",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#preferredTransportId",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "priceReferenceId",
+      "description": "Reference to a price reference if existing (e.g. Allotment number; contract reference; etc.)",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingPreferences",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#priceReferenceId",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  ]
+}

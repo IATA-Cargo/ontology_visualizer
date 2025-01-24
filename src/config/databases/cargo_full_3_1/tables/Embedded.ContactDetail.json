@@ -1,0 +1,31 @@
+{
+  "schema": "Embedded",
+  "name": "ContactDetail",
+  "description": "Contact details",
+  "columns": [
+    {
+      "name": "contactDetailType",
+      "description": "Type of the contact details; e.g. Phone number; Mail address",
+      "type": "ContactDetailType",
+      "schemaType": "Enum",
+      "array": false,
+      "codelist": true,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ContactDetail",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#contactDetailType",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ContactDetailType"
+    },
+    {
+      "name": "textualValue",
+      "description": "Textual value filled on use context (eg. characteristic colour; contactDetail mail address; etc.)",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ContactDetail",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#textualValue",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  ]
+}

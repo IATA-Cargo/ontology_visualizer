@@ -1,0 +1,163 @@
+{
+  "schema": "Activity",
+  "name": "UnitComposition",
+  "description": "Activity to describe composition and decomposition of LoadingUnits",
+  "columns": [
+    {
+      "name": "loadingUnit",
+      "description": "Reference to the LoadingUnit composed in the Unit Composition or referenced in Composing actions",
+      "type": "LoadingUnit",
+      "schemaType": "Common",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "ULD",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitComposition",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#loadingUnit",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LoadingUnit"
+    },
+    {
+      "name": "checkActions",
+      "description": "References to CheckActions performed for the Activity",
+      "type": "Check",
+      "schemaType": "Action",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitComposition",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checkActions",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
+    },
+    {
+      "name": "executionStatus",
+      "description": "Enum stating the status of the Activity",
+      "type": "ExecutionStatus",
+      "schemaType": "Enum",
+      "array": false,
+      "codelist": true,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitComposition",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#executionStatus",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExecutionStatus"
+    },
+    {
+      "name": "checks",
+      "description": "References to the CheckActions performed on the object",
+      "type": "Check",
+      "schemaType": "Action",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitComposition",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
+    },
+    {
+      "name": "externalReferences",
+      "description": "References to all associated ExternalReferences",
+      "type": "ExternalReference",
+      "schemaType": "Common",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitComposition",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
+    },
+    {
+      "name": "compositionActions",
+      "description": "References to all CompositionActions performed for the UnitComposition",
+      "type": "Composing",
+      "schemaType": "Action",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitComposition",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#compositionActions",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Composing"
+    },
+    {
+      "name": "contactDetails",
+      "description": "Information about contactDetails",
+      "type": "ContactDetail",
+      "schemaType": "Embedded",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitComposition",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#contactDetails",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ContactDetail"
+    },
+    {
+      "name": "contactPersons",
+      "description": "References to Actors (Person; NonHumanActor) acting as contacts",
+      "type": "Actor",
+      "schemaType": "Agent",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "Person|NonHumanActor",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitComposition",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#contactPersons",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Actor"
+    },
+    {
+      "name": "servedServices",
+      "description": "Reference to Services this Activity is executed for",
+      "type": "LogisticsService",
+      "schemaType": "Abstract",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "Booking",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitComposition",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#servedServices",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsService"
+    },
+    {
+      "name": "events",
+      "description": "Events object",
+      "type": "LogisticsEvent",
+      "schemaType": "Event",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitComposition",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
+    },
+    {
+      "name": "skeletonIndicator",
+      "description": "Indicator whether a logistics object is a skeleton object",
+      "type": "boolean",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitComposition",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    {
+      "name": "compositionIdentifier",
+      "description": "Short text holding the process number if necessary",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitComposition",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#compositionIdentifier",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "slac",
+      "description": "Shipper's Load And Count  ( total contained piece count as provided by shipper)",
+      "type": "integer",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#UnitComposition",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#slac",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "schema": "Distribution",
+  "name": "BookingRequest",
+  "description": "A party; usually the freight forwarder; creates the BookingRequest in order to confirm the booking to the Carrier",
+  "columns": [
+    {
+      "name": "booking",
+      "description": "Reference to the Booking",
+      "type": "Booking",
+      "schemaType": "Service",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingRequest",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#booking",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Booking"
+    },
+    {
+      "name": "forBookingOption",
+      "description": "Reference to the BookingOption the LogisticsObject is detailing",
+      "type": "BookingOption",
+      "schemaType": "Distribution",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingRequest",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#forBookingOption",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#BookingOption"
+    },
+    {
+      "name": "checks",
+      "description": "References to the CheckActions performed on the object",
+      "type": "Check",
+      "schemaType": "Action",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingRequest",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
+    },
+    {
+      "name": "externalReferences",
+      "description": "References to all associated ExternalReferences",
+      "type": "ExternalReference",
+      "schemaType": "Common",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingRequest",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
+    },
+    {
+      "name": "waybillNumber",
+      "description": "House or Master Waybill unique identifier",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingRequest",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#waybillNumber",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "waybillPrefix",
+      "description": "Prefix used for the Waybill Number. Refer to IATA Airlines Codes",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingRequest",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#waybillPrefix",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "events",
+      "description": "Events object",
+      "type": "LogisticsEvent",
+      "schemaType": "Event",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingRequest",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
+    },
+    {
+      "name": "skeletonIndicator",
+      "description": "Indicator whether a logistics object is a skeleton object",
+      "type": "boolean",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingRequest",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
+    }
+  ]
+}

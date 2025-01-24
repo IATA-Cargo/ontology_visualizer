@@ -1,0 +1,79 @@
+{
+  "schema": "Embedded",
+  "name": "VolumePieceGroup",
+  "description": "VolumePieceGroup details",
+  "columns": [
+    {
+      "name": "dryIceWeight",
+      "description": "Weight of dry ice",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#VolumePieceGroup",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#dryIceWeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "pieceGroupGrossWeight",
+      "description": "Total gross weight of the piece group",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#VolumePieceGroup",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceGroupGrossWeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "totalVolume",
+      "description": "Total volume fo the volume piece group",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#VolumePieceGroup",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#totalVolume",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "pieceGroupCount",
+      "description": "Number of pieces in the piece group",
+      "type": "integer",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#VolumePieceGroup",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceGroupCount",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    {
+      "name": "pieceGroupId",
+      "description": "Identifier of the piece group; increasing integers",
+      "type": "integer",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#VolumePieceGroup",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceGroupId",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    {
+      "name": "stackable",
+      "description": "Stackable indicator for the pieces (boolean)",
+      "type": "boolean",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#VolumePieceGroup",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#stackable",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
+    }
+  ]
+}
