@@ -1,0 +1,79 @@
+{
+  "schema": "Embedded",
+  "name": "CodeListElement",
+  "description": "Embedded object to transmit codes from non-RDF code lists in 1R in a semi-structured way. Code lists may be externally maintained codes (such as HS codes) or carrier-specific codes. If a code is present in RDF-form as Named Individual (like in the 1R core code lists ontology); it suffices to put in its IRI",
+  "columns": [
+    {
+      "name": "code",
+      "description": "Code or short version of a code; for example CH for Switzerland when referring to the UN/LOCODE code list",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#code",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "codeDescription",
+      "description": "Description or long version of the code; for example Switzerland for Switzerland when referring to the UN/LOCODE code list",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#codeDescription",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "codeLevel",
+      "description": "Integer indicating the level of a code if a codelists is hierarchical; for example HS-Codes",
+      "type": "integer",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#codeLevel",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    {
+      "name": "codeListName",
+      "description": "Official name of the code list without version number when direct reference is not possible; for example UN/LOCODE when referring to the UN/LOCODE code list",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#codeListName",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "codeListReference",
+      "description": "URL to access the code list the code is taken from; for example https://unece.org/trade/cefact/unlocode-code-list-country-and-territory for UN/LOCODE.",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#codeListReference",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "codeListVersion",
+      "description": "Version of the code list; for example 223-1 for UN/LOCODE. Used if the property codeListName is used or the version is not apparent from the resource referred to in property codeListReference.",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#codeListVersion",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  ]
+}

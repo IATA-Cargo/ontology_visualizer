@@ -1,0 +1,55 @@
+{
+  "schema": "Embedded",
+  "name": "MovementTime",
+  "description": "Times referring to Transport Movements; used to describe specfic times such as Actual Departure time; etc.",
+  "columns": [
+    {
+      "name": "direction",
+      "description": "Direction to indicate if it's Inbound or Outbound",
+      "type": "DirectionType",
+      "schemaType": "Enum",
+      "array": false,
+      "codelist": true,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#MovementTime",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#direction",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#DirectionType"
+    },
+    {
+      "name": "movementMilestone",
+      "description": "The milestone list still needs to be defined; it includes elements from CXML Code List 1.92 but is not limited to those values; e.g. block-on and block-off times might be added as a comparison to wheels off and touchdown.",
+      "type": "MovementIndicator",
+      "schemaType": "CodeList",
+      "array": false,
+      "codelist": true,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#MovementTime",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#movementMilestone",
+      "valueIRI": "https://onerecord.iata.org/ns/code-lists/MovementIndicator"
+    },
+    {
+      "name": "movementTimeType",
+      "description": "The type of time can be Actual; Estimated ot Scheduled",
+      "type": "MovementTimeType",
+      "schemaType": "Enum",
+      "array": false,
+      "codelist": true,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#MovementTime",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#movementTimeType",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#MovementTimeType"
+    },
+    {
+      "name": "movementTimestamp",
+      "description": "Timestamp (date and time) of the movement time. If the movement time is recorded asynchronously; the timestamp should reflect the actual time; not when the data was created.",
+      "type": "dateTime",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#MovementTime",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#movementTimestamp",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  ]
+}

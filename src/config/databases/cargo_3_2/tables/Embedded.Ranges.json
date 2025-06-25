@@ -1,0 +1,67 @@
+{
+  "schema": "Embedded",
+  "name": "Ranges",
+  "description": "Ranges details",
+  "columns": [
+    {
+      "name": "rateClassCode",
+      "description": "Rate class code e.g. Q. Refer to CXML Code List 1.4 Rate Class Codes",
+      "type": "RateClassCode",
+      "schemaType": "CodeList",
+      "array": false,
+      "codelist": true,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Ranges",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#rateClassCode",
+      "valueIRI": "https://onerecord.iata.org/ns/code-lists/RateClassCode"
+    },
+    {
+      "name": "uldRateClassType",
+      "description": "ULD Rate information - ULD Rate Class Type",
+      "type": "CodeListElement",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Ranges",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#uldRateClassType",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
+    },
+    {
+      "name": "maximumQuantity",
+      "description": "Maximum quantity",
+      "type": "double",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Ranges",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#maximumQuantity",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#double"
+    },
+    {
+      "name": "minimumQuantity",
+      "description": "Minimum quantity",
+      "type": "double",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Ranges",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#minimumQuantity",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#double"
+    },
+    {
+      "name": "unitBasis",
+      "description": "Specific commodity code linked to commodity",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Ranges",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#unitBasis",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  ]
+}

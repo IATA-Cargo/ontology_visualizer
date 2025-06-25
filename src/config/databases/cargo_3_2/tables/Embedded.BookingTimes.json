@@ -1,0 +1,67 @@
+{
+  "schema": "Embedded",
+  "name": "BookingTimes",
+  "description": "Previously called Schedule. This object refers to times used for the Booking Option Request (preferences part of the request) or the Booking Option (times sur as LAT where there is a commitment from the carrier)",
+  "columns": [
+    {
+      "name": "earliestAcceptanceTime",
+      "description": "Earliest acceptance date time (requested or proposed)",
+      "type": "dateTime",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingTimes",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#earliestAcceptanceTime",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    {
+      "name": "latestAcceptanceTime",
+      "description": "Latest Acceptance time as per CargoIQ definition (requested; proposed or actual)",
+      "type": "dateTime",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingTimes",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#latestAcceptanceTime",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    {
+      "name": "latestArrivalTime",
+      "description": "Latest arrival time at destination",
+      "type": "dateTime",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingTimes",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#latestArrivalTime",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    {
+      "name": "timeOfAvailability",
+      "description": "Time of availability of the shipment as per CargoIQ definition",
+      "type": "dateTime",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingTimes",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#timeOfAvailability",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    {
+      "name": "totalTransitTime",
+      "description": "Total transit time as per CargoIQ definition; expressed as a duration",
+      "type": "duration",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#BookingTimes",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#totalTransitTime",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#duration"
+    }
+  ]
+}

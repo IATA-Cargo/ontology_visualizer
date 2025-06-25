@@ -1,0 +1,43 @@
+{
+  "schema": "Embedded",
+  "name": "Adjustments",
+  "description": "Adjustments in the context of CASS records",
+  "columns": [
+    {
+      "name": "correctionNumber",
+      "description": "Number of the adjustment",
+      "type": "integer",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Adjustments",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#correctionNumber",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    {
+      "name": "correctionSerialNumber",
+      "description": "Serial Number of the correction",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Adjustments",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#correctionSerialNumber",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "reasonsForAdjustments",
+      "description": "A free text for user to include a reason for correction",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Adjustments",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#reasonsForAdjustments",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  ]
+}

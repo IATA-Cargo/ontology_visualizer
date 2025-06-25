@@ -1,0 +1,31 @@
+{
+  "schema": "Embedded",
+  "name": "OtherIdentifier",
+  "description": "Other identifiers",
+  "columns": [
+    {
+      "name": "otherIdentifierType",
+      "description": "Identifier type or description",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#OtherIdentifier",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#otherIdentifierType",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "textualValue",
+      "description": "Textual value filled on use context (eg. characteristic colour; contactDetail mail address; etc.)",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#OtherIdentifier",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#textualValue",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  ]
+}
