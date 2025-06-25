@@ -1,0 +1,31 @@
+{
+  "schema": "Embedded",
+  "name": "AccountingNote",
+  "description": "Embedded object used for AWB mapping (box 10)",
+  "columns": [
+    {
+      "name": "accountingNoteIdentifier",
+      "description": "String holding accounting information (AWB box 10)",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#AccountingNote",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#accountingNoteIdentifier",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "accountingNoteText",
+      "description": "String holding the identifier in an accounting note (AWB box 10)",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#AccountingNote",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#accountingNoteText",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "Embedded",
+  "name": "Measurement",
+  "description": "Measurements details for Sensors; either generic or geolocation measurements are recorded",
+  "columns": [
+    {
+      "name": "measurementValue",
+      "description": "Information about all non-Geolocation values of the measurement",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Measurement",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#measurementValue",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "recordedGeolocation",
+      "description": "Reference to the Geolocation recorded of the measurement",
+      "type": "Geolocation",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Measurement",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#recordedGeolocation",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Geolocation"
+    },
+    {
+      "name": "measurementTimestamp",
+      "description": "Timestamp for the measurement",
+      "type": "dateTime",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Measurement",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#measurementTimestamp",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
+    }
+  ]
+}

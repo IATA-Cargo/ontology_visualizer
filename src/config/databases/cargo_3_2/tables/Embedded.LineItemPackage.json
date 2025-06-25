@@ -1,0 +1,55 @@
+{
+  "schema": "Embedded",
+  "name": "LineItemPackage",
+  "description": "Grouping of pieces for rating information as per Waybill box 22I",
+  "columns": [
+    {
+      "name": "packageGrossWeight",
+      "description": "Information about the total weight of a grouping of pieces",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LineItemPackage",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#packageGrossWeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "packageVolume",
+      "description": "Information about the total volume of a grouping of pieces",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LineItemPackage",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#packageVolume",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "pieceReferences",
+      "description": "References to Pieces for which a rate applies",
+      "type": "Piece",
+      "schemaType": "Core",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "PieceLiveAnimals|PieceDg",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LineItemPackage",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Piece"
+    },
+    {
+      "name": "packageSlac",
+      "description": "Integer holding the total slac of a grouping of pieces",
+      "type": "integer",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LineItemPackage",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#packageSlac",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  ]
+}

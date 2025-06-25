@@ -1,0 +1,103 @@
+{
+  "schema": "Embedded",
+  "name": "ULDSpecificPiece",
+  "description": "ULDSpecificPiece details",
+  "columns": [
+    {
+      "name": "dryIceWeight",
+      "description": "Weight of dry ice",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULDSpecificPiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#dryIceWeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "pieceGroupGrossWeight",
+      "description": "Total gross weight of the piece group",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULDSpecificPiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceGroupGrossWeight",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "uldContourCode",
+      "description": "Contour code as per IATA ULD Regulation",
+      "type": "CodeListElement",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULDSpecificPiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#uldContourCode",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
+    },
+    {
+      "name": "uldType",
+      "description": "Type of ULD as per IATA ULD Regulation",
+      "type": "CodeListElement",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULDSpecificPiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#uldType",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
+    },
+    {
+      "name": "pieceGroupCount",
+      "description": "Number of pieces in the piece group",
+      "type": "integer",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULDSpecificPiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceGroupCount",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    {
+      "name": "pieceGroupId",
+      "description": "Identifier of the piece group; increasing integers",
+      "type": "integer",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULDSpecificPiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#pieceGroupId",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    {
+      "name": "slac",
+      "description": "Shipper's Load And Count  ( total contained piece count as provided by shipper)",
+      "type": "integer",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULDSpecificPiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#slac",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    {
+      "name": "uldSerialNumber",
+      "description": "Serial number that allows to uniquely identify the ULD",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#ULDSpecificPiece",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#uldSerialNumber",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "schema": "Abstract",
+  "name": "LogisticsAction",
+  "description": "Superclass: LogisticsAction is a specific task with a specific result performed on one or more physical LOs by one party in the context of an Activity",
+  "columns": [
+    {
+      "name": "performedAt",
+      "description": "Reference to the Location the Action was performed at",
+      "type": "Location",
+      "schemaType": "Common",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#performedAt",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Location"
+    },
+    {
+      "name": "actionTimeType",
+      "description": "Enum stating the type of the Action",
+      "type": "ActionTimeType",
+      "schemaType": "Enum",
+      "array": false,
+      "codelist": true,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#actionTimeType",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ActionTimeType"
+    },
+    {
+      "name": "servedActivity",
+      "description": "Reference to the Activity the Action was performed for",
+      "type": "LogisticsActivity",
+      "schemaType": "Abstract",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "UnitComposition|TransportMovement|Storage",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#servedActivity",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsActivity"
+    },
+    {
+      "name": "checks",
+      "description": "References to the CheckActions performed on the object",
+      "type": "Check",
+      "schemaType": "Action",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
+    },
+    {
+      "name": "externalReferences",
+      "description": "References to all associated ExternalReferences",
+      "type": "ExternalReference",
+      "schemaType": "Common",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
+    },
+    {
+      "name": "contactDetails",
+      "description": "Information about contactDetails",
+      "type": "ContactDetail",
+      "schemaType": "Embedded",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#contactDetails",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ContactDetail"
+    },
+    {
+      "name": "contactPersons",
+      "description": "References to Actors (Person; NonHumanActor) acting as contacts",
+      "type": "Actor",
+      "schemaType": "Agent",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "Person|NonHumanActor",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#contactPersons",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Actor"
+    },
+    {
+      "name": "otherIdentifiers",
+      "description": "Details about any other identifier; depending on the context of use",
+      "type": "OtherIdentifier",
+      "schemaType": "Embedded",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#otherIdentifiers",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#OtherIdentifier"
+    },
+    {
+      "name": "actionEndTime",
+      "description": "DateTime holding the end time of the Action",
+      "type": "dateTime",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#actionEndTime",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    {
+      "name": "actionStartTime",
+      "description": "DateTime holding the start time of the Action",
+      "type": "dateTime",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#actionStartTime",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    {
+      "name": "events",
+      "description": "Events object",
+      "type": "LogisticsEvent",
+      "schemaType": "Event",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
+    },
+    {
+      "name": "skeletonIndicator",
+      "description": "Indicator whether a logistics object is a skeleton object",
+      "type": "boolean",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
+    }
+  ]
+}
