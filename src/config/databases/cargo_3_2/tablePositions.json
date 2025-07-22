@@ -223,6 +223,10 @@
     "x": 1584,
     "y": -768
   },
+  "Embedded.AccountNumber": {
+    "x": -2016,
+    "y": 4176
+  },
   "Embedded.AccountingNote": {
     "x": 1968,
     "y": 464
@@ -265,7 +269,7 @@
   },
   "Embedded.ContactDetail": {
     "x": -2016,
-    "y": 4144
+    "y": 4288
   },
   "Embedded.CurrencyValue": {
     "x": -1632,
@@ -273,7 +277,7 @@
   },
   "Embedded.Dimensions": {
     "x": -1760,
-    "y": 4016
+    "y": 3920
   },
   "Embedded.Geolocation": {
     "x": -1632,
@@ -341,7 +345,7 @@
   },
   "Embedded.Value": {
     "x": -1632,
-    "y": 4160
+    "y": 4224
   },
   "Embedded.VolumePieceGroup": {
     "x": 2336,
