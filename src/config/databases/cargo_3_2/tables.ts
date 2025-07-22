@@ -1,6 +1,7 @@
 import { TableConfig } from "../../../Visualizer/types";
 
 import embeddedAccountingNoteTable from "./tables/Embedded.AccountingNote.json";
+import embeddedAccountNumberTable from "./tables/Embedded.AccountNumber.json";
 import embeddedActivitySequenceTable from "./tables/Embedded.ActivitySequence.json";
 import agentActorTable from "./tables/Agent.Actor.json";
 import embeddedAddressTable from "./tables/Embedded.Address.json";
@@ -98,6 +99,7 @@ import coreWaybillTable from "./tables/Core.Waybill.json";
 import embeddedWaybillLineItemTable from "./tables/Embedded.WaybillLineItem.json";
 
 const tables: TableConfig[] = [
+  embeddedAccountNumberTable,
   embeddedAccountingNoteTable,
   embeddedActivitySequenceTable,
   agentActorTable,

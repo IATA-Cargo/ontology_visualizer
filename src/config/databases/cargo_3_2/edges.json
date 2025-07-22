@@ -727,6 +727,13 @@
       "relation": "hasMany"
     },
     {
+      "source": "Embedded.Party",
+      "sourceKey": "accountNumbers",
+      "target": "Embedded.AccountNumber",
+      "targetKey": "",
+      "relation": "hasMany"
+    },
+    {
       "source": "Core.Waybill",
       "sourceKey": "billingDetails",
       "target": "BillingSettlement.BillingDetails",
