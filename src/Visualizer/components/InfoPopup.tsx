@@ -70,18 +70,18 @@ export function InfoPopup(props: PopupProps) {
           </div>
           </p>
           <h2>Shortcuts</h2>
-
           <p>
             <strong>SHIFT + hover</strong> over a table node or a column name to see the description.
           </p>
-
           <p>
             <strong>CTRL + click</strong> over a table node or a column name to copy the text.
           </p>
-
           <p className="mb-32">
             <strong>Hover over a table node</strong> to highlight all incoming and outgoing edges.
           </p>
+        </div>
+        <div className="info-popup__footer">
+          <div className="flex"><a href="https://www.iata.org/en/privacy/"><b>Privacy</b></a></div>
         </div>
       </div>
     </div>
