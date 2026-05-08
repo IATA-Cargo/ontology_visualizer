@@ -58,6 +58,16 @@
       opacity: 0.7;
     }
   }
+
+  &__footer {
+    max-width: var(--content-default);
+    margin-inline: auto;
+    display: flex;
+    justify-content: flex-end;         /* align everything to the right */
+    align-items: center;
+    gap: var(--space-4);
+    flex-wrap: wrap;
+  }
 }
 
 .tag {
