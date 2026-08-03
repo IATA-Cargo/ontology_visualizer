@@ -223,13 +223,13 @@
     "x": 1584,
     "y": -768
   },
-  "Embedded.AccountNumber": {
-    "x": -2016,
-    "y": 4176
-  },
   "Embedded.AccountingNote": {
     "x": 1968,
     "y": 464
+  },
+  "Embedded.AccountNumber": {
+    "x": -2016,
+    "y": 4176
   },
   "Embedded.ActivitySequence": {
     "x": 304,

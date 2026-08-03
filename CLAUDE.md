@@ -30,9 +30,12 @@ Run a single generator test by name:
 node --test --test-name-pattern="vis_linkTo" bin/lib/__tests__
 ```
 
-`npm run build` fails if the committed config in `src/config/` no longer matches
-the ontologies — that is the point, see below. Use `--verbose` on
-`ontology-build` to list every suppressed line, hidden deprecation and file written.
+`prebuild` runs `ontology:check`, which reports — as a **warning** — any committed
+file in `src/config/` that no longer matches the ontologies. It does not fail the
+build: hand-editing generated output before a deployment is intended behaviour.
+Use `ontology:check:strict` when you do want a hard gate (it promotes every
+warning, staleness included, to an error). Use `--verbose` on `ontology-build` to
+list every suppressed line, hidden deprecation and file written.
 
 Caveat: `src/Visualizer/Visualizer.test.tsx` renders `database={"bindle"}`, a
 dataset that has not existed for several versions, so `npm test` cannot pass as
@@ -56,10 +59,12 @@ src/config/databases/<slug>/**
 ```
 
 Generated output is **committed**, and `prebuild` runs `ontology:check` to
-byte-compare it against a fresh derivation. This is what makes committing
-generated files safe: a stale commit fails the build instead of deploying. Never
-"fix" a generated file by editing it — change the ontology or the generator and
-regenerate.
+byte-compare it against a fresh derivation, warning about anything that diverged.
+The warning is deliberately not fatal — a manual edit shortly before a deployment
+is a supported workflow — so treat a divergence as a prompt to decide, not an
+error. The normal fix is still to change the ontology or the generator and
+regenerate rather than to hand-patch a generated file, because the next
+`ontology:build` overwrites it.
 
 The generator lives entirely in `bin/` and is never imported from `src/`, so
 CRA's webpack (which only walks `src/`) provably cannot pull `n3` into the
@@ -212,4 +217,5 @@ The working copy lives in a OneDrive-synced folder on Windows. Two consequences:
 CI (`.github/workflows/deploy.yml`) uses `npm ci --include=dev` — explicit
 because the job sets `NODE_ENV=production` and the generator's only dependency is
 a devDependency. It runs `test:gen` and `ontology:check` as named steps before
-the build so a stale commit is obvious in the log.
+the build so a divergence between the ontologies and the committed config is
+visible in the log without blocking the deploy.

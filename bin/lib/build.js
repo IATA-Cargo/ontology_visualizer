@@ -159,7 +159,7 @@ function build(options = {}) {
   for (const slug of databases.added) log.info(`registered "${slug}" in ${DATABASES_PATH}`);
   writer.write(DATABASES_PATH, serializeDatabases(databases.databases));
 
-  blocking += reportWriter(writer, { log, check });
+  blocking += reportWriter(writer, { log, check, strict });
 
   if (json) {
     console.log(

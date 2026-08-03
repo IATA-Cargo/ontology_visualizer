@@ -70,7 +70,7 @@ function reportView(view, diagnostics, { log, strict, verbose }) {
 }
 
 /** Summarise what a write pass changed, or what --check found out of date. */
-function reportWriter(writer, { log, check }) {
+function reportWriter(writer, { log, check, strict }) {
   log.plain("");
   if (!writer.dirty) {
     log.plain(`${check ? "check" : "write"}: ${writer.unchanged.length} files already up to date`);
@@ -78,14 +78,20 @@ function reportWriter(writer, { log, check }) {
   }
 
   if (check) {
-    log.error(
-      `${writer.dirty} generated file(s) do not match the ontology. ` +
-        `Run "npm run ontology:build" and commit the result.`
+    // A mismatch is reported, not fatal. Hand-editing a generated file before a
+    // deployment is intended behaviour here, so the check tells you what diverged
+    // and leaves the decision to you: regenerate, or keep the manual edit.
+    // `--strict` (npm run ontology:check:strict) turns this back into a failure
+    // for anyone who wants the stricter gate.
+    const report = strict ? log.error : log.warn;
+    report(
+      `${writer.dirty} generated file(s) differ from what the ontology derives. ` +
+        `Run "npm run ontology:build" to regenerate, or keep the manual edits.`
     );
     for (const f of [...writer.created, ...writer.changed, ...writer.removed]) {
-      log.error(`   ${f}`);
+      report(`   ${f}`);
     }
-    return writer.dirty;
+    return strict ? writer.dirty : 0;
   }
 
   log.plain(

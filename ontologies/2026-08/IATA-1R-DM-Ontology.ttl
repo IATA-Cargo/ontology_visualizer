@@ -9548,7 +9548,8 @@ owl:thing rdf:type rdfs:Datatype .
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :eventFor ;
-                                     owl:allValuesFrom :Shipment
+                                     owl:allValuesFrom :Shipment;
+                                     :vis_hidden true
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :notifiedOrganization ;

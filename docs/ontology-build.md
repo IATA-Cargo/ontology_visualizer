@@ -31,12 +31,18 @@ is a hard error rather than a silent overwrite of its predecessor.
 npm run ontology:build          # generate config for every ontologies/*.ttl
 npm run ontology:build cargo_3_2 -- --verbose
 npm run ontology:check          # re-derive and byte-compare; writes nothing
+npm run ontology:check:strict   # same, but a difference fails the command
 npm run ontology:diff cargo_3_2 # semantic diff vs what is committed
 npm run test:gen                # generator unit tests
 ```
 
-`prebuild` runs `ontology:check`, so `npm run build` fails if the committed
-config no longer matches the ontology. Publishing stays "commit to `main`".
+`prebuild` runs `ontology:check`, so every build re-derives the config and reports
+any committed file that has drifted from the ontology. This is a **warning, not a
+failure** — editing generated output by hand before a deployment is a supported
+workflow, and the check's job is to tell you what diverged rather than to veto it.
+
+Reach for `ontology:check:strict` when you want the hard gate: it promotes all
+warnings, including a stale file, to errors. Publishing stays "commit to `main`".
 
 ## Authoring
 

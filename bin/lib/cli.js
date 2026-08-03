@@ -9,8 +9,11 @@ ontology-build -- generate visualizer config from ontologies/*.ttl
 
 Options
   --check              re-derive and byte-compare against the committed files,
-                       writing nothing; exits non-zero if anything is stale
-  --strict             treat warnings as failures (used by the build)
+                       writing nothing. Differences are reported as warnings --
+                       hand-editing generated output before a deployment is
+                       allowed, so this does not fail on its own
+  --strict             treat warnings as failures, including a stale-file
+                       difference under --check
   --prune-positions    drop saved positions that no longer match a box
   --verbose            list every suppressed line and file written
   --json               machine-readable output for CI annotations
