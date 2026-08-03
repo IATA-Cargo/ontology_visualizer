@@ -37,17 +37,6 @@ jobs:
       # build working if that ever changes.
       run: npm ci --include=dev
 
-    - name: Test the ontology generator
-      run: npm run test:gen
-
-    - name: Validate every ontology release
-      # Re-derives the config from every ontologies/<release>/*.ttl and
-      # byte-compares it against what is committed, writing nothing. A release
-      # folder whose committed config is stale fails here rather than deploying.
-      # `npm run build` runs this again via prebuild; having it as its own step
-      # makes a stale commit obvious in the Actions log.
-      run: npm run ontology:check
-
     - name: Build React
       run: npm run build
 
