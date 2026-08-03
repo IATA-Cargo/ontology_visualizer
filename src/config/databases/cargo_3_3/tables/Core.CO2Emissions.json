@@ -1,0 +1,103 @@
+{
+  "schema": "Core",
+  "name": "CO2Emissions",
+  "description": "CO2 Calculation",
+  "columns": [
+    {
+      "name": "calculatedEmissions",
+      "description": "CO2 emissions calculated",
+      "type": "Value",
+      "schemaType": "Embedded",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CO2Emissions",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#calculatedEmissions",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Value"
+    },
+    {
+      "name": "calculationFor",
+      "description": "Reference to the TransportMovement or TransportLegs the CO2Emissions have been calculated for",
+      "type": "LogisticsObject",
+      "schemaType": "Abstract",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "Actor|Answer|BillingDetails|Booking|BookingOption|BookingOptionRequest|BookingRequest|BookingShipment|CO2Emissions|Carrier|Check|CheckTemplate|CheckTotalResult|Company|Composing|CustomsInformation|DgDeclaration|DgProductRadioactive|DgRadioactiveIsotope|EpermitConsignment|EpermitSignature|ExternalReference|HandlingService|Insurance|IotDevice|Item|ItemDg|LiveAnimalsEpermit|Loading|LoadingMaterial|LoadingUnit|Location|LogisticsAction|LogisticsActivity|LogisticsAgent|LogisticsService|NonHumanActor|Organization|PackagingType|Person|PhysicalLogisticsObject|Piece|PieceDg|PieceLiveAnimals|Price|Product|ProductDg|PublicAuthority|Question|Ratings|SecurityDeclaration|Sensor|Shipment|Storage|Storing|TransportLegs|TransportMeans|TransportMovement|ULD|UnitComposition|Waybill",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CO2Emissions",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#calculationFor",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsObject"
+    },
+    {
+      "name": "checks",
+      "description": "References to the CheckActions performed on the object",
+      "type": "Check",
+      "schemaType": "Action",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CO2Emissions",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
+    },
+    {
+      "name": "events",
+      "description": "Events object",
+      "type": "LogisticsEvent",
+      "schemaType": "Event",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "StatusUpdateEvent",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CO2Emissions",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
+    },
+    {
+      "name": "externalReferences",
+      "description": "References to all associated ExternalReferences",
+      "type": "ExternalReference",
+      "schemaType": "Common",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CO2Emissions",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
+    },
+    {
+      "name": "methodName",
+      "description": "Name of the CO2 calculation method",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CO2Emissions",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#methodName",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "methodVersion",
+      "description": "Version used for the calculation",
+      "type": "string",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CO2Emissions",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#methodVersion",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
+    },
+    {
+      "name": "skeletonIndicator",
+      "description": "Indicator whether a logistics object is a skeleton object",
+      "type": "boolean",
+      "schemaType": "",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CO2Emissions",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
+    }
+  ]
+}

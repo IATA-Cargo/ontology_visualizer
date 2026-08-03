@@ -1,0 +1,115 @@
+#!/usr/bin/env node
+"use strict";
+
+// Write box positions captured from the app into a database's tablePositions.json.
+//
+//   In the app: arrange the boxes, press Ctrl+Shift+P (copies JSON to clipboard)
+//   Then:       npm run positions cargo_3_2      # paste, then Ctrl+Z / Ctrl+D
+//   Or:         Get-Clipboard | node bin/positions cargo_3_2
+//
+// Replaces pasting over the file by hand, which is where a stray keystroke could
+// silently corrupt 97 entries. Every id is checked against the generated boxes
+// first, so a paste aimed at the wrong database is caught rather than written --
+// with 97 near-identical ids that mistake is easy to make and invisible after.
+
+const fs = require("fs");
+const { discoverOntologies } = require("./lib/discover");
+const { parseOntology } = require("./lib/parse");
+const { resolveOntology } = require("./lib/infer");
+const { readViews } = require("./lib/select/views");
+const { selectBoxes } = require("./lib/select/boxes");
+const { mergePositions, readPositions, serializePositions } = require("./lib/emit/positions");
+const { CONFIG_ROOT } = require("./lib/build");
+
+const slug = process.argv[2];
+if (!slug) {
+  console.error("usage: npm run positions <slug>    (JSON on stdin)");
+  process.exit(2);
+}
+
+const silent = { info: () => {}, warn: () => {}, error: () => {} };
+
+/** The boxes the generator would produce for this slug. */
+function boxesFor(target) {
+  for (const { ttlPath } of discoverOntologies()) {
+    const ontology = parseOntology(ttlPath, { log: silent });
+    const resolved = resolveOntology(ontology);
+    for (const view of readViews(ttlPath, ontology, { log: silent }).views) {
+      if (view.slug !== target) continue;
+      return selectBoxes(resolved, view).boxes;
+    }
+  }
+  return null;
+}
+
+function readStdin() {
+  try {
+    return fs.readFileSync(0, "utf8");
+  } catch {
+    return "";
+  }
+}
+
+(() => {
+  const boxes = boxesFor(slug);
+  if (!boxes) {
+    console.error(`no generated view with slug "${slug}"`);
+    process.exit(1);
+  }
+
+  const raw = readStdin().trim();
+  if (!raw) {
+    console.error("nothing on stdin -- paste the clipboard JSON, then press Ctrl+Z (Windows) or Ctrl+D");
+    process.exit(2);
+  }
+
+  let incoming;
+  try {
+    incoming = JSON.parse(raw);
+  } catch (error) {
+    console.error(`stdin is not valid JSON: ${error.message}`);
+    process.exit(1);
+  }
+
+  const entries = Object.entries(incoming);
+  const badShape = entries.filter(
+    ([, p]) => !p || typeof p.x !== "number" || typeof p.y !== "number"
+  );
+  if (!entries.length || badShape.length) {
+    console.error(
+      `expected {"Schema.Class": {"x": 0, "y": 0}, ...}` +
+        (badShape.length ? ` -- ${badShape.length} malformed entr(ies), first: ${badShape[0][0]}` : "")
+    );
+    process.exit(1);
+  }
+
+  const known = new Set(boxes.map((b) => b.nodeId));
+  const unknown = entries.map(([id]) => id).filter((id) => !known.has(id));
+  if (unknown.length) {
+    console.error(
+      `${unknown.length} of ${entries.length} ids are not boxes of "${slug}" -- ` +
+        `is this paste from a different database?\n   ${unknown.slice(0, 8).join(", ")}` +
+        (unknown.length > 8 ? `, ...` : "")
+    );
+    process.exit(1);
+  }
+
+  const file = `${CONFIG_ROOT}/${slug}/tablePositions.json`;
+  const merged = mergePositions({
+    existing: { ...readPositions(file), ...incoming },
+    boxes,
+  });
+
+  const before = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : "";
+  const after = serializePositions(merged.positions);
+  if (before === after) {
+    console.log(`${file} already matches -- nothing to do`);
+    return;
+  }
+
+  fs.writeFileSync(file, after, "utf8");
+  console.log(
+    `wrote ${file}: ${entries.length} position(s) applied, ` +
+      `${merged.addedIds.length} auto-placed, ${merged.staleIds.length} stale kept`
+  );
+})();

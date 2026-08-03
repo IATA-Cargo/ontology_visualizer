@@ -5,7 +5,7 @@
   "columns": [
     {
       "name": "consignee",
-      "description": "Reference to the Organization that fulfills the role of the consignee; for a LiveAnimalsEpermit it has to include complete name and address (box 3)",
+      "description": "Reference to the Organization that fulfills the role of the consignee, for a LiveAnimalsEpermit it has to include complete name and address (box 3)",
       "type": "Company",
       "schemaType": "Agent",
       "array": false,
@@ -41,7 +41,7 @@
     },
     {
       "name": "signatures",
-      "description": "List of all the signatures of the Epermit (applicant box 4; issuing authority box 6; issuer box 13 and examining authority box 14)",
+      "description": "List of all the signatures of the Epermit (applicant box 4, issuing authority box 6, issuer box 13 and examining authority box 14)",
       "type": "EpermitSignature",
       "schemaType": "LiveAnimals",
       "array": true,
@@ -86,6 +86,18 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#LiveAnimalsEpermit",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
       "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
+    },
+    {
+      "name": "events",
+      "description": "Events object",
+      "type": "LogisticsEvent",
+      "schemaType": "Event",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#LiveAnimalsEpermit",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "externalReferences",
@@ -194,18 +206,6 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#LiveAnimalsEpermit",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#validUntil",
       "valueIRI": "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
-    {
-      "name": "events",
-      "description": "Events object",
-      "type": "LogisticsEvent",
-      "schemaType": "Event",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#LiveAnimalsEpermit",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",

@@ -4,28 +4,16 @@
   "description": "Booking object refers to a confirmed booking",
   "columns": [
     {
-      "name": "bookingRequest",
-      "description": "Reference to the Booking Request",
-      "type": "BookingRequest",
-      "schemaType": "Distribution",
-      "array": false,
+      "name": "activitySequences",
+      "description": "Information about the Activities that are part of the Service and their sequence",
+      "type": "ActivitySequence",
+      "schemaType": "Embedded",
+      "array": true,
       "codelist": false,
       "columnSubTypes": "",
       "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#bookingRequest",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#BookingRequest"
-    },
-    {
-      "name": "issuedForWaybill",
-      "description": "Reference to the Waybill object",
-      "type": "Waybill",
-      "schemaType": "Core",
-      "array": false,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#issuedForWaybill",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#Waybill"
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#activitySequences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ActivitySequence"
     },
     {
       "name": "arrivalLocation",
@@ -38,6 +26,30 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#arrivalLocation",
       "valueIRI": "https://onerecord.iata.org/ns/cargo#Location"
+    },
+    {
+      "name": "bookingRequest",
+      "description": "Reference to the Booking Request",
+      "type": "BookingRequest",
+      "schemaType": "Distribution",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#bookingRequest",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#BookingRequest"
+    },
+    {
+      "name": "bookingSegments",
+      "description": "Information about booking segments - physics allocated to a specific transport leg",
+      "type": "BookingSegment",
+      "schemaType": "Embedded",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#bookingSegments",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#BookingSegment"
     },
     {
       "name": "bookingShipmentDetails",
@@ -62,6 +74,18 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#bookingStatus",
       "valueIRI": "https://onerecord.iata.org/ns/cargo#BookingStatus"
+    },
+    {
+      "name": "bookingTimes",
+      "description": "Information about the Booking Times of a provided Booking Option",
+      "type": "BookingTimes",
+      "schemaType": "Embedded",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#bookingTimes",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#BookingTimes"
     },
     {
       "name": "carrier",
@@ -100,52 +124,16 @@
       "valueIRI": "https://onerecord.iata.org/ns/cargo#Location"
     },
     {
-      "name": "updateBookingOptionRequests",
-      "description": "References to BookingOptionRequests that request to update the Booking",
-      "type": "BookingOptionRequest",
-      "schemaType": "Distribution",
-      "array": true,
+      "name": "issuedForWaybill",
+      "description": "Reference to the Waybill object",
+      "type": "Waybill",
+      "schemaType": "Core",
+      "array": false,
       "codelist": false,
       "columnSubTypes": "",
       "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#updateBookingOptionRequests",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#BookingOptionRequest"
-    },
-    {
-      "name": "checks",
-      "description": "References to the CheckActions performed on the object",
-      "type": "Check",
-      "schemaType": "Action",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
-    },
-    {
-      "name": "externalReferences",
-      "description": "References to all associated ExternalReferences",
-      "type": "ExternalReference",
-      "schemaType": "Common",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
-    },
-    {
-      "name": "bookingTimes",
-      "description": "Information about the Booking Times of a provided Booking Option",
-      "type": "BookingTimes",
-      "schemaType": "Embedded",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#bookingTimes",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#BookingTimes"
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#issuedForWaybill",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Waybill"
     },
     {
       "name": "stationRemarks",
@@ -170,6 +158,90 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#transportLegs",
       "valueIRI": "https://onerecord.iata.org/ns/cargo#TransportLegs"
+    },
+    {
+      "name": "updateBookingOptionRequests",
+      "description": "References to BookingOptionRequests that request to update the Booking",
+      "type": "BookingOptionRequest",
+      "schemaType": "Distribution",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#updateBookingOptionRequests",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#BookingOptionRequest"
+    },
+    {
+      "name": "checks",
+      "description": "References to the CheckActions performed on the object",
+      "type": "Check",
+      "schemaType": "Action",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
+    },
+    {
+      "name": "contactDetails",
+      "description": "Information about contactDetails",
+      "type": "ContactDetail",
+      "schemaType": "Embedded",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#contactDetails",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ContactDetail"
+    },
+    {
+      "name": "contactPersons",
+      "description": "References to Actors (Person, NonHumanActor) acting as contacts",
+      "type": "Actor",
+      "schemaType": "Agent",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "NonHumanActor|Person",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#contactPersons",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Actor"
+    },
+    {
+      "name": "events",
+      "description": "Events object",
+      "type": "LogisticsEvent",
+      "schemaType": "Event",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
+    },
+    {
+      "name": "externalReferences",
+      "description": "References to all associated ExternalReferences",
+      "type": "ExternalReference",
+      "schemaType": "Common",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#externalReferences",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
+    },
+    {
+      "name": "additionalInformation",
+      "description": "Additional information related to the Booking Option, e.g. sales details",
+      "type": "string",
+      "schemaType": "",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#additionalInformation",
+      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
       "name": "shippingInfo",
@@ -220,18 +292,6 @@
       "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
-      "name": "events",
-      "description": "Events object",
-      "type": "LogisticsEvent",
-      "schemaType": "Event",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
-    },
-    {
       "name": "skeletonIndicator",
       "description": "Indicator whether a logistics object is a skeleton object",
       "type": "boolean",
@@ -242,66 +302,6 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
       "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    {
-      "name": "activitySequences",
-      "description": "Information about the Activities that are part of the Service and their sequence",
-      "type": "ActivitySequence",
-      "schemaType": "Embedded",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#activitySequences",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#ActivitySequence"
-    },
-    {
-      "name": "contactDetails",
-      "description": "Information about contactDetails",
-      "type": "ContactDetail",
-      "schemaType": "Embedded",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#contactDetails",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#ContactDetail"
-    },
-    {
-      "name": "contactPersons",
-      "description": "References to Actors (Person; NonHumanActor) acting as contacts",
-      "type": "Actor",
-      "schemaType": "Agent",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "Person|NonHumanActor",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#contactPersons",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#Actor"
-    },
-    {
-      "name": "bookingSegments",
-      "description": "Information about booking segments - physics allocated to a specific transport leg",
-      "type": "BookingSegment",
-      "schemaType": "",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#bookingSegments",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#BookingSegment"
-    },
-    {
-      "name": "additionalInformation",
-      "description": "Additional information related to the Booking Option; e.g. sales details",
-      "type": "string",
-      "schemaType": "",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#Booking",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#additionalInformation",
-      "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     }
   ]
 }

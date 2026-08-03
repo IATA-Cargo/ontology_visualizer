@@ -40,6 +40,18 @@
       "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
     },
     {
+      "name": "events",
+      "description": "Events object",
+      "type": "LogisticsEvent",
+      "schemaType": "Event",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#DgRadioactiveIsotope",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
+    },
+    {
       "name": "externalReferences",
       "description": "References to all associated ExternalReferences",
       "type": "ExternalReference",
@@ -65,7 +77,7 @@
     },
     {
       "name": "criticalitySafetyIndexNumeric",
-      "description": "Applies to fissile material only; other than fissile excepted. A numeric value expressed to one decimal place preceded by the letters CSI.",
+      "description": "Applies to fissile material only, other than fissile excepted. A numeric value expressed to one decimal place preceded by the letters CSI.",
       "type": "string",
       "schemaType": "",
       "array": false,
@@ -89,7 +101,7 @@
     },
     {
       "name": "isotopeName",
-      "description": "The name or symbol of each radionuclide or for mixtures of radionuclides; an appropriate general description; or a list of the most restrictive radionuclides. ",
+      "description": "The name or symbol of each radionuclide or for mixtures of radionuclides, an appropriate general description, or a list of the most restrictive radionuclides.",
       "type": "string",
       "schemaType": "",
       "array": false,
@@ -122,18 +134,6 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#DgRadioactiveIsotope",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#specialFormIndicator",
       "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    {
-      "name": "events",
-      "description": "Events object",
-      "type": "LogisticsEvent",
-      "schemaType": "Event",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#DgRadioactiveIsotope",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",

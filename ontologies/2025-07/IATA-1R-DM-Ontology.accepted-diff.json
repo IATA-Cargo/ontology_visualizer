@@ -1,0 +1,28 @@
+{
+  "//": "Signed-off differences between what this ontology generates and the original workbook-derived edges.json. Each entry needs a one-line justification. This list should shrink over time; it is the audit trail of intentional change, not a place to park unexplained diffs.",
+
+  "edges.omitted": {
+    "Distribution.BookingOption|statusBookingOption|Enum.BookingOptionStatus|": "Target is in the Enum group, which is not drawn as a box, so React Flow discards this edge already -- it renders nothing in any of the four published databases. Emitting it would mean downgrading the orphan-edge rule, which is the rule that catches cargo_core's 82 dangling edges. Generated set is therefore 120 edges, not 121."
+  },
+
+  "edges.targetKeyChanged": {
+    "Service.Booking|bookingShipmentDetails|Distribution.BookingShipment": "Original targetKey was 'forBookingOptionRequest', but that property is declared on BookingShipment with range BookingOptionRequest, not Booking, so no inverse resolves. The identical edge also exists from BookingOptionRequest, so the original was almost certainly copy-pasted. Emitted with targetKey \"\", which attaches to BookingShipment's header handle instead of the forBookingOptionRequest row."
+  },
+
+  "edges.relationChanged": {
+    "Core.Piece|ofShipment|Core.Shipment|pieces": "hasMany, not hasOne -- no owl:maxCardinality in the TTL",
+    "Core.SecurityDeclaration|issuedForPiece|Core.Piece|securityDeclarations": "hasMany, not hasOne -- no owl:maxCardinality in the TTL",
+    "Core.SecurityDeclaration|regulatedEntityAcceptor|Embedded.RegulatedEntity|": "hasMany, not hasOne -- no owl:maxCardinality in the TTL",
+    "Service.Booking|bookingTimes|Embedded.BookingTimes|": "hasMany, not hasOne -- no owl:maxCardinality in the TTL",
+    "//": "All four were hasOne in the workbook output but the ontology states no cardinality for them. Left faithful to the ontology. To change these, add owl:maxCardinality \"1\"^^xsd:nonNegativeInteger to the relevant class -- which is arguably the correct modelling fix and would remove these four entries."
+  },
+
+  "columns.duplicated": {
+    "Common.IotDevice.manufacturer": "The ontology declares two allValuesFrom restrictions for this property (Organization and Company), which correctly yields two columns. Present in the published output too.",
+    "DG.DgDeclaration.issuedForPiece": "Same: two declared ranges (Piece and PieceDg) produce two columns."
+  },
+
+  "descriptions": {
+    "//": "Descriptions now come straight from rdfs:comment, so commas, trailing whitespace and non-ASCII characters are preserved. The published files had 162 descriptions with commas replaced by semicolons, several truncated, and some UTF-8 mojibake -- all artifacts of the CSV round-trip through bin/import's split(\",\") parser. These are fixes, not regressions."
+  }
+}

@@ -10,7 +10,7 @@
       "schemaType": "Abstract",
       "array": false,
       "codelist": false,
-      "columnSubTypes": "Piece|Location|IotDevice|LoadingMaterial|Sensor|PieceLiveAnimals|Item|LoadingUnit|TransportMeans|ULD|PieceDg|ItemDg",
+      "columnSubTypes": "IotDevice|Item|ItemDg|LoadingMaterial|LoadingUnit|Location|Piece|PieceDg|PieceLiveAnimals|Sensor|TransportMeans|ULD",
       "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#attachedToObject",
       "valueIRI": "https://onerecord.iata.org/ns/cargo#PhysicalLogisticsObject"
@@ -40,16 +40,16 @@
       "valueIRI": "https://onerecord.iata.org/ns/cargo#Company"
     },
     {
-      "name": "manufacturer",
-      "description": "Manufacturing company details and contacts",
-      "type": "Organization",
-      "schemaType": "Agent",
-      "array": false,
+      "name": "attachedIotDevices",
+      "description": "References to all connected IotDevices",
+      "type": "IotDevice",
+      "schemaType": "Common",
+      "array": true,
       "codelist": false,
-      "columnSubTypes": "Carrier|Company|PublicAuthority|Carrier|Company|PublicAuthority",
+      "columnSubTypes": "",
       "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#manufacturer",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#Organization"
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#attachedIotDevices",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#IotDevice"
     },
     {
       "name": "checks",
@@ -64,6 +64,18 @@
       "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
     },
     {
+      "name": "events",
+      "description": "Events object",
+      "type": "LogisticsEvent",
+      "schemaType": "Event",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
+    },
+    {
       "name": "externalReferences",
       "description": "References to all associated ExternalReferences",
       "type": "ExternalReference",
@@ -76,16 +88,16 @@
       "valueIRI": "https://onerecord.iata.org/ns/cargo#ExternalReference"
     },
     {
-      "name": "attachedIotDevices",
-      "description": "References to all connected IotDevices",
-      "type": "IotDevice",
-      "schemaType": "Common",
+      "name": "involvedInActions",
+      "description": "References to the Actions the object is involved in",
+      "type": "LogisticsAction",
+      "schemaType": "Abstract",
       "array": true,
       "codelist": false,
-      "columnSubTypes": "",
+      "columnSubTypes": "Check|Composing|Loading|Storing",
       "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#attachedIotDevices",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#IotDevice"
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#involvedInActions",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction"
     },
     {
       "name": "description",
@@ -136,18 +148,6 @@
       "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
     },
     {
-      "name": "events",
-      "description": "Events object",
-      "type": "LogisticsEvent",
-      "schemaType": "Event",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
-    },
-    {
       "name": "skeletonIndicator",
       "description": "Indicator whether a logistics object is a skeleton object",
       "type": "boolean",
@@ -158,18 +158,6 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#skeletonIndicator",
       "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    {
-      "name": "involvedInActions",
-      "description": "References to the Actions the object is involved in",
-      "type": "LogisticsAction",
-      "schemaType": "Abstract",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "Check|Composing|Loading|Storing",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#IotDevice",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#involvedInActions",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsAction"
     }
   ]
 }

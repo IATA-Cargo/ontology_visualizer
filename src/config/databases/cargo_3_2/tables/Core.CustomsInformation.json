@@ -4,32 +4,8 @@
   "description": "Customs information details",
   "columns": [
     {
-      "name": "issuedForPiece",
-      "description": "Reference to the Piece the document was issued for",
-      "type": "Piece",
-      "schemaType": "Core",
-      "array": false,
-      "codelist": false,
-      "columnSubTypes": "PieceLiveAnimals|PieceDg",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#CustomsInformation",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#issuedForPiece",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#Piece"
-    },
-    {
-      "name": "issuedForShipment",
-      "description": "Reference to the shipment the document was issued for",
-      "type": "Shipment",
-      "schemaType": "Core",
-      "array": false,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#CustomsInformation",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#issuedForShipment",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#Shipment"
-    },
-    {
       "name": "contentCode",
-      "description": "Customs; Security and Regulatory Control Information Identifier. Coded indicator qualifying Customs related information: Item Number I; Exemption Legend L; System Downtime Reference S; Unique Consignment Reference Number U; Movement Reference Number M . Refers to Code List 1.1. Condition: At least one of the three elements (Country Code; Information Identifier or Customs; Security and Regulatory Control Information Identifier) must be completed",
+      "description": "Customs, Security and Regulatory Control Information Identifier. Coded indicator qualifying Customs related information: Item Number \"I\", Exemption Legend \"L\", System Downtime Reference \"S\", Unique Consignment Reference Number \"U\", Movement Reference Number \"M\" . Refers to Code List 1.1. Condition: At least one of the three elements (Country Code, Information Identifier or Customs, Security and Regulatory Control Information Identifier) must be completed",
       "type": "CodeListElement",
       "schemaType": "Embedded",
       "array": false,
@@ -52,8 +28,32 @@
       "valueIRI": "https://onerecord.iata.org/ns/cargo#CodeListElement"
     },
     {
+      "name": "issuedForPiece",
+      "description": "Reference to the Piece the document was issued for",
+      "type": "Piece",
+      "schemaType": "Core",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "PieceDg|PieceLiveAnimals",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CustomsInformation",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#issuedForPiece",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Piece"
+    },
+    {
+      "name": "issuedForShipment",
+      "description": "Reference to the shipment the document was issued for",
+      "type": "Shipment",
+      "schemaType": "Core",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CustomsInformation",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#issuedForShipment",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Shipment"
+    },
+    {
       "name": "subjectCode",
-      "description": "Information Identifier. Code identifying a piece of information/entity e.g. IMP for import; EXP for export; AGT for Agent; ISS for The Regulated Agent Issuing the Security Status for a Consignment etc. Condition: At least one of the three elements (Country Code; Information Identifier or Customs; Security and Regulatory Control Information Identifier) must be completed",
+      "description": "Information Identifier. Code identifying a piece of information/entity e.g. \"IMP\" for import, \"EXP\" for export, \"AGT\" for Agent, \"ISS\" for The Regulated Agent Issuing the Security Status for a Consignment etc. Condition: At least one of the three elements (Country Code, Information Identifier or Customs, Security and Regulatory Control Information Identifier) must be completed",
       "type": "CodeListElement",
       "schemaType": "Embedded",
       "array": false,
@@ -76,6 +76,18 @@
       "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
     },
     {
+      "name": "events",
+      "description": "Events object",
+      "type": "LogisticsEvent",
+      "schemaType": "Event",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CustomsInformation",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
+    },
+    {
       "name": "externalReferences",
       "description": "References to all associated ExternalReferences",
       "type": "ExternalReference",
@@ -89,7 +101,7 @@
     },
     {
       "name": "note",
-      "description": "Free text for customs remarks; not used in OCI Composition Rules Table",
+      "description": "Free text for customs remarks, not used in OCI Composition Rules Table",
       "type": "string",
       "schemaType": "",
       "array": false,
@@ -113,7 +125,7 @@
     },
     {
       "name": "otherCustomsInformation",
-      "description": "Supplementary Customs; Security and Regulatory Control Information",
+      "description": "Supplementary Customs, Security and Regulatory Control Information",
       "type": "string",
       "schemaType": "",
       "array": false,
@@ -122,18 +134,6 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#CustomsInformation",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#otherCustomsInformation",
       "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    {
-      "name": "events",
-      "description": "Events object",
-      "type": "LogisticsEvent",
-      "schemaType": "Event",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#CustomsInformation",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",

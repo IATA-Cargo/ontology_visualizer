@@ -1,0 +1,12 @@
+{
+  "//": "Presentation choices for the views generated from this ontology. The ontology itself holds the data decisions (cargo:vis_element, cargo:vis_hidden, cargo:vis_linkTo, cargo:vis_level); this file only names the databases and how much detail each shows.",
+  "views": [
+    {
+      "slug": "cargo_3_3",
+      "name": "ONE Record Full Datamodel 3.3.0",
+      "description": "Visualization of the full ONE Record Data Model 3.3.0",
+      "maxLevel": null,
+      "hideDeprecated": true
+    }
+  ]
+}

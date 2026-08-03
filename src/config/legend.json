@@ -1,0 +1,67 @@
+[
+  {
+    "key": "Embedded",
+    "label": "Embedded",
+    "description": "Objects usually embedded into Logistic Objects"
+  },
+  {
+    "key": "Core",
+    "label": "Core",
+    "description": "Objects essential for the transportation supply chain"
+  },
+  {
+    "key": "Service",
+    "label": "Service",
+    "description": "Objects subtypes of LogisticsService"
+  },
+  {
+    "key": "Common",
+    "label": "Common",
+    "description": "Common objects that are usually used linked to other Logistic Objects"
+  },
+  {
+    "key": "Abstract",
+    "label": "Abstract",
+    "description": "Superclass not used as such, e.g. LogisticsObject"
+  },
+  {
+    "key": "Activity",
+    "label": "Activity",
+    "description": "Objects belonging to LogisticsActivity superclass"
+  },
+  {
+    "key": "Action",
+    "label": "Action",
+    "description": "Objects belonging to LogisticsAction superclass, e.g. Loading"
+  },
+  {
+    "key": "Event",
+    "label": "Event",
+    "description": "LogisticsEvents"
+  },
+  {
+    "key": "BillingSettlement",
+    "label": "Billing & Settlement",
+    "description": "Objects specifically used for Billing & Settlement purposes"
+  },
+  {
+    "key": "Distribution",
+    "label": "Distribution",
+    "description": "Objects designed and used mostly for Distribution"
+  },
+  {
+    "key": "Agent",
+    "label": "Agent",
+    "description": "Objects part of LogisticsAgent superclass"
+  },
+  {
+    "key": "DG",
+    "label": "Dangerous Goods",
+    "description": "Objects specifically used for transportation of Dangerous Goods as per the DGR"
+  },
+  {
+    "key": "LiveAnimals",
+    "label": "Live Animals",
+    "description": "Objects specifically used for transportation of Live Animals as per the LAR"
+  }
+]

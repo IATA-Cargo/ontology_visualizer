@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+"use strict";
+
+// Generate the visualizer's config from the ontologies in ontologies/*.ttl.
+//
+// Replaces the old pipeline of: load the TTL into a reasoner-enabled store, run
+// ontology_to_csv/sparql_query.txt, paste the results into a 1.4 MB Excel
+// workbook, copy CSV text out, run bin/import, then hand-place edges.json.
+//
+// Everything the workbook used to decide is now stated in the ontology itself
+// through its cargo:vis_* annotation vocabulary. See bin/lib/select/hide.js for
+// the cargo:vis_hidden semantics.
+
+const { parseArgs, USAGE } = require("./lib/cli");
+const { build } = require("./lib/build");
+
+(() => {
+  let options;
+  try {
+    options = parseArgs(process.argv.slice(2));
+  } catch (error) {
+    console.error(error.message);
+    process.exit(2);
+  }
+
+  if (options.help) {
+    console.log(USAGE.trim());
+    return;
+  }
+
+  try {
+    const { exitCode } = build(options);
+    process.exit(exitCode);
+  } catch (error) {
+    console.error(`ontology-build failed: ${error.message}`);
+    if (options.verbose) console.error(error.stack);
+    process.exit(1);
+  }
+})();

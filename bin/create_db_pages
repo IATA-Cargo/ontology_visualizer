@@ -6,7 +6,8 @@ const fs = require("fs").promises;
 
 // design_notes/0001_using_regular_links.md
 (async () => {
-  await fs.mkdir("build/databases");
+  // recursive so a second build does not throw on an existing directory
+  await fs.mkdir("build/databases", { recursive: true });
 
   for (const databaseSlug of Object.keys(databases)) {
     await fs.copyFile("build/index.html", `build/databases/${databaseSlug}.html`);

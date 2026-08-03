@@ -22,7 +22,7 @@
       "schemaType": "Abstract",
       "array": false,
       "codelist": false,
-      "columnSubTypes": "LogisticsActivity|Answer|Actor|Piece|Location|EpermitConsignment|Organization|IotDevice|PhysicalLogisticsObject|BillingDetails|Booking|BookingOption|BookingRequest|BookingShipment|Carrier|Person|Check|CheckTemplate|CheckTotalResult|CO2Emissions|LoadingMaterial|Composing|Sensor|PieceLiveAnimals|Item|DgProductRadioactive|Product|CustomsInformation|Waybill|DgDeclaration|ExternalReference|LiveAnimalsEpermit|BookingOptionRequest|Price|ProductDg|UnitComposition|Insurance|Shipment|LogisticsAction|DgRadioactiveIsotope|LoadingUnit|Loading|TransportMeans|TransportMovement|Company|PackagingType|LogisticsAgent|Question|Ratings|SecurityDeclaration|LogisticsService|EpermitSignature|Storing|TransportLegs|ULD|PieceDg|HandlingService|ItemDg|NonHumanActor|PublicAuthority|Storage",
+      "columnSubTypes": "Actor|Answer|BillingDetails|Booking|BookingOption|BookingOptionRequest|BookingRequest|BookingShipment|CO2Emissions|Carrier|Check|CheckTemplate|CheckTotalResult|Company|Composing|CustomsInformation|DgDeclaration|DgProductRadioactive|DgRadioactiveIsotope|EpermitConsignment|EpermitSignature|ExternalReference|HandlingService|Insurance|IotDevice|Item|ItemDg|LiveAnimalsEpermit|Loading|LoadingMaterial|LoadingUnit|Location|LogisticsAction|LogisticsActivity|LogisticsAgent|LogisticsService|NonHumanActor|Organization|PackagingType|Person|PhysicalLogisticsObject|Piece|PieceDg|PieceLiveAnimals|Price|Product|ProductDg|PublicAuthority|Question|Ratings|SecurityDeclaration|Sensor|Shipment|Storage|Storing|TransportLegs|TransportMeans|TransportMovement|ULD|UnitComposition|Waybill",
       "classIRI": "https://onerecord.iata.org/ns/cargo#CO2Emissions",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#calculationFor",
       "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsObject"
@@ -38,6 +38,18 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#CO2Emissions",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
       "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
+    },
+    {
+      "name": "events",
+      "description": "Events object",
+      "type": "LogisticsEvent",
+      "schemaType": "Event",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CO2Emissions",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "externalReferences",
@@ -74,18 +86,6 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#CO2Emissions",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#methodVersion",
       "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    {
-      "name": "events",
-      "description": "Events object",
-      "type": "LogisticsEvent",
-      "schemaType": "Event",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#CO2Emissions",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",

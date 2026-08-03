@@ -52,6 +52,18 @@
       "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
     },
     {
+      "name": "events",
+      "description": "Events object",
+      "type": "LogisticsEvent",
+      "schemaType": "Event",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitConsignment",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
+    },
+    {
       "name": "externalReferences",
       "description": "References to all associated ExternalReferences",
       "type": "ExternalReference",
@@ -74,18 +86,6 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitConsignment",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#usedToDateQuotaQuantity",
       "valueIRI": "http://www.w3.org/2001/XMLSchema#integer"
-    },
-    {
-      "name": "events",
-      "description": "Events object",
-      "type": "LogisticsEvent",
-      "schemaType": "Event",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#EpermitConsignment",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",

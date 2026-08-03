@@ -31,7 +31,22 @@ jobs:
         cache: 'npm'
 
     - name: Install dependencies
-      run: npm ci
+      # --include=dev because the job sets NODE_ENV=production, and the ontology
+      # generator's only dependency (n3) is a devDependency. npm 10 does not omit
+      # dev packages from `npm ci` on NODE_ENV alone, but stating it keeps the
+      # build working if that ever changes.
+      run: npm ci --include=dev
+
+    - name: Test the ontology generator
+      run: npm run test:gen
+
+    - name: Validate every ontology release
+      # Re-derives the config from every ontologies/<release>/*.ttl and
+      # byte-compares it against what is committed, writing nothing. A release
+      # folder whose committed config is stale fails here rather than deploying.
+      # `npm run build` runs this again via prebuild; having it as its own step
+      # makes a stale commit obvious in the Actions log.
+      run: npm run ontology:check
 
     - name: Build React
       run: npm run build
