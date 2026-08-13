@@ -1,0 +1,94 @@
+#!/usr/bin/env node
+"use strict";
+
+// Semantic diff between what the ontology now says and what is committed.
+//
+// Use this to review an ontology bump, or to sign off the one-time migration
+// from the Excel pipeline. Unlike `ontology-build --check` (which byte-compares
+// and therefore trips on column order alone), this reports MEANING changes:
+// tables, columns, field values and edges.
+
+const { discoverOntologies } = require("./lib/discover");
+const { parseOntology } = require("./lib/parse");
+const { resolveOntology } = require("./lib/infer");
+const { readViews } = require("./lib/select/views");
+const { selectBoxes } = require("./lib/select/boxes");
+const { selectLines } = require("./lib/select/lines");
+const { buildTableConfig } = require("./lib/emit/tableConfig");
+const { buildEdgeConfigs } = require("./lib/emit/edgeConfig");
+const { compareBoxes } = require("./lib/util/sortOrder");
+const { diffView } = require("./lib/diff");
+const { CONFIG_ROOT } = require("./lib/build");
+
+const slugs = process.argv.slice(2).filter((a) => !a.startsWith("-"));
+const quiet = process.argv.includes("--quiet");
+const silent = { info: () => {}, warn: () => {}, error: () => {} };
+
+let differences = 0;
+
+for (const { ttlPath } of discoverOntologies()) {
+  const ontology = parseOntology(ttlPath, { log: silent });
+  const resolved = resolveOntology(ontology);
+  const { views } = readViews(ttlPath, ontology, { log: silent });
+
+  for (const viewDef of views) {
+    if (slugs.length && !slugs.includes(viewDef.slug)) continue;
+
+    const { boxes } = selectBoxes(resolved, viewDef);
+    boxes.sort(compareBoxes);
+    const { lines } = selectLines(resolved, boxes);
+    const edges = buildEdgeConfigs(lines);
+
+    const d = diffView({
+      slug: viewDef.slug,
+      boxes,
+      edges,
+      buildTableConfig,
+      configRoot: CONFIG_ROOT,
+    });
+
+    const counts = {
+      "tables added": d.tablesAdded,
+      "tables removed": d.tablesRemoved,
+      "columns added": d.columnsAdded,
+      "columns removed": d.columnsRemoved,
+      "edges added": d.edgesAdded,
+      "edges removed": d.edgesRemoved,
+    };
+
+    console.log(`\n=== ${d.slug} ===`);
+    console.log(
+      `${boxes.length} boxes, ${edges.length} edges  ` +
+        `(a description also counts as unchanged if it differs only by the workbook's ` +
+        `comma->semicolon substitution)`
+    );
+
+    let viewDiff = 0;
+    for (const [label, list] of Object.entries(counts)) {
+      viewDiff += list.length;
+      if (!list.length) continue;
+      console.log(`\n${label}: ${list.length}`);
+      const shown = quiet ? list.slice(0, 10) : list;
+      for (const item of shown) console.log(`   ${item}`);
+      if (shown.length < list.length) console.log(`   ... +${list.length - shown.length} more`);
+    }
+
+    if (d.fieldChanges.length) {
+      viewDiff += d.fieldChanges.length;
+      console.log(`\nfield changes: ${d.fieldChanges.length}`);
+      const shown = quiet ? d.fieldChanges.slice(0, 10) : d.fieldChanges;
+      for (const c of shown) {
+        console.log(`   ${c.where}.${c.field}: ${JSON.stringify(c.committed)} -> ${JSON.stringify(c.generated)}`);
+      }
+      if (shown.length < d.fieldChanges.length) {
+        console.log(`   ... +${d.fieldChanges.length - shown.length} more`);
+      }
+    }
+
+    if (!viewDiff) console.log("\nno semantic differences");
+    differences += viewDiff;
+  }
+}
+
+console.log(`\ntotal semantic differences: ${differences}`);
+process.exit(differences ? 1 : 0);

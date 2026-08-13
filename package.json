@@ -30,14 +30,20 @@
     "web-vitals": "^3.1.0"
   },
   "scripts": {
+    "postinstall": "node bin/clean-tilde-dirs.js",
     "start": "react-scripts start",
-    "build": "react-scripts build && bin/create_db_pages",
+    "prebuild": "npm run ontology:check",
+    "build": "react-scripts build && node bin/create_db_pages",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "reset": "node bin/reset",
-    "import": "node bin/import"
+    "ontology:build": "node bin/ontology-build",
+    "ontology:check": "node bin/ontology-build --check",
+    "ontology:check:strict": "node bin/ontology-build --check --strict",
+    "ontology:diff": "node bin/ontology-diff",
+    "positions": "node bin/positions",
+    "test:gen": "node --test bin/lib/__tests__"
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +65,7 @@
   },
   "devDependencies": {
     "@juggle/resize-observer": "^3.4.0",
+    "n3": "^1.17.2",
     "sass": "^1.58.0"
   }
 }

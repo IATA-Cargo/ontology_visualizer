@@ -1,0 +1,13 @@
+{
+  "//": "Presentation choices for the views generated from this ontology. The ontology itself holds the data decisions (cargo:vis_element, cargo:vis_hidden, cargo:vis_level); this file only names the databases and how much detail each shows. Named after the TTL, not the slug, because one ontology can produce several views.",
+  "views": [
+    {
+      "slug": "cargo_3_2",
+      "name": "ONE Record Full Datamodel 3.2.0",
+      "description": "Visualization of the full ONE Record Data Model 3.2.0",
+      "maxLevel": null,
+      "//hideDeprecated": "false, not the default: this view reproduces the published 3.2.0 edge set exactly, and that set predates these deprecations. Turning it on would drop the VolumetricWeight box and 2 columns.",
+      "hideDeprecated": false
+    }
+  ]
+}

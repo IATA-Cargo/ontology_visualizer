@@ -1,0 +1,132 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX cargo: <https://onerecord.iata.org/ns/cargo#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT DISTINCT ?type ?element ?class ?property ?elementValue ?value ?cardinality ?inverse (GROUP_CONCAT(?class_description; separator=" - ") AS ?class_description_full) (GROUP_CONCAT(?property_description; separator=" - ") AS ?property_description_full) ?value_subclasses
+
+WHERE {
+
+
+SELECT DISTINCT ?type ?element ?class ?property ?elementValue ?value ?cardinality ?inverse ?class_description ?property_description (GROUP_CONCAT(str(?subvalue); separator="|") AS ?value_subclasses)
+
+WHERE {
+  {
+    BIND("Explicit" AS ?type)
+    ?class a owl:Class .
+    OPTIONAL {
+      ?class cargo:vis_element ?element.
+    }
+    OPTIONAL {
+      ?class rdfs:subClassOf ?restriction .
+      ?restriction a owl:Restriction .
+      ?restriction owl:onProperty ?property .
+      ?restriction owl:allValuesFrom ?value .
+      OPTIONAL {
+        ?value cargo:vis_element ?elementValue.
+      }
+      # Cardinality
+      OPTIONAL {
+        ?class rdfs:subClassOf ?restrictionCard .
+        ?restrictionCard owl:onProperty ?property.
+        ?restrictionCard owl:maxCardinality ?cardinality .
+      }
+      # Class description
+      OPTIONAL {
+        ?class rdfs:comment ?class_description .
+      }
+      # Property description
+      OPTIONAL {
+        ?property rdfs:comment ?property_description .
+      }
+      # Check if inverse exists, is declared for Value and allows for Class
+      OPTIONAL {
+        ?value rdfs:subClassOf ?restrictionInv .
+        ?restrictionInv a owl:Restriction .
+        ?property cargo:vis_inverseProperty ?inverse .
+        ?restrictionInv owl:onProperty ?inverse .
+        ?restrictionInv owl:allValuesFrom ?class .
+      }
+      # Check if inverse exists, is declared for Value and allows for parent of class
+      OPTIONAL {
+        ?value rdfs:subClassOf ?restrictionInv .
+        ?restrictionInv a owl:Restriction .
+        ?property cargo:vis_inverseProperty ?inverse .
+        ?restrictionInv owl:onProperty ?inverse .
+        ?restrictionInv owl:allValuesFrom ?parentclass .
+        ?class rdfs:subClassOf+ ?parentclass .
+      }
+      # Check for subclasses of value
+      OPTIONAL {
+        ?subvalue rdfs:subClassOf+ ?value.
+        FILTER(?value != cargo:CodeListElement)
+        FILTER(?value != xsd:string)
+        FILTER(?value != ?subvalue)
+      }
+    }
+  }
+  UNION
+  {
+    BIND("Implicit" AS ?type)
+    ?class a owl:Class .
+    OPTIONAL {
+      ?class cargo:vis_element ?element.
+    }
+    ?class rdfs:subClassOf ?restriction .
+    ?restriction a owl:Restriction .
+    ?restriction owl:onProperty ?property .
+    # Cardinality
+    OPTIONAL {
+      ?class rdfs:subClassOf ?restrictionCard .
+      ?restrictionCard owl:onProperty ?property.
+      ?restrictionCard owl:maxCardinality ?cardinality .
+    }
+    # Class description
+    OPTIONAL {
+      ?class rdfs:comment ?class_description .
+    }
+    # Property description
+    OPTIONAL {
+      ?property rdfs:comment ?property_description .
+    }
+    ?restriction owl:allValuesFrom ?parentvalue .
+    ?parentvalue a owl:Class .
+    ?value rdfs:subClassOf+ ?parentvalue .
+    ?value a owl:Class .
+    OPTIONAL {
+      ?value cargo:vis_element ?elementValue.
+    }
+    # Check if inverse exists, is declared for Value and allows for Class
+    OPTIONAL {
+      ?value rdfs:subClassOf ?restrictionInv .
+      ?restrictionInv a owl:Restriction .
+      ?property cargo:vis_inverseProperty ?inverse .
+      ?restrictionInv owl:onProperty ?inverse .
+      ?restrictionInv owl:allValuesFrom ?class .
+    }
+    # Check if inverse exists, is declared for Value and allows for parent of class
+    OPTIONAL {
+      ?value rdfs:subClassOf ?restrictionInv .
+      ?restrictionInv a owl:Restriction .
+      ?property cargo:vis_inverseProperty ?inverse .
+      ?restrictionInv owl:onProperty ?inverse .
+      ?restrictionInv owl:allValuesFrom ?parentclass .
+      ?class rdfs:subClassOf+ ?parentclass .
+    }
+    # Check for subclasses of value
+    OPTIONAL {
+      ?subvalue rdfs:subClassOf+ ?value.
+      FILTER(?value != cargo:CodeListElement)
+      FILTER(?value != xsd:string)
+      FILTER(?value != ?subvalue)
+    }
+  }
+  FILTER(isIRI(?value))
+  FILTER(isIRI(?class))
+  FILTER(?parentvalue != cargo:CodeListElement)
+}
+GROUP BY ?type ?element ?class ?property ?elementValue ?value ?cardinality ?inverse ?class_description ?property_description
+}
+GROUP BY ?type ?element ?class ?property ?elementValue ?value ?cardinality ?inverse ?value_subclasses
+ORDER BY ?class

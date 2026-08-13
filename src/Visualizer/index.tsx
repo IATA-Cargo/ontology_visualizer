@@ -73,7 +73,12 @@ const Flow: React.FC<FlowProps> = (props: FlowProps) => {
     setEdges(() => initialEdges);
 
     const handleKeyboard = (e: KeyboardEvent) => {
-      if (e.ctrlKey && e.key === "p") {
+      // Ctrl+Shift+P is the shortcut; plain Ctrl+P is kept as a deprecated alias.
+      // preventDefault stops the browser print dialog opening over the canvas,
+      // which it did on every save before this.
+      if (e.ctrlKey && (e.key === "p" || e.key === "P")) {
+        e.preventDefault();
+
         const nodes = instance.getNodes();
 
         logTablePositions(nodes);
@@ -335,7 +340,9 @@ const Flow: React.FC<FlowProps> = (props: FlowProps) => {
         </Controls>
         <Background color="#aaa" gap={16} />
       </ReactFlow>
-      {infoPopupOn && <InfoPopup onClose={() => { setInfoPopupOn(false) }} />}
+      {infoPopupOn && <InfoPopup
+        onClose={() => { setInfoPopupOn(false) }}
+        schemaColors={currentDatabase.schemaColors} />}
       {unknownDatasetOn && <DatabaseMenuPopup
         headline={"Unknown dataset :warning:"}
         subheadline={"Available datasets :point_down:"}

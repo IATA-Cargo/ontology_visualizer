@@ -4,30 +4,6 @@
   "description": "Dangerous goods declaration",
   "columns": [
     {
-      "name": "issuedForPiece",
-      "description": "Reference to the Piece the document was issued for",
-      "type": "PieceDg",
-      "schemaType": "DG",
-      "array": false,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#DgDeclaration",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#issuedForPiece",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#PieceDg"
-    },
-    {
-      "name": "issuedForPiece",
-      "description": "Reference to the Piece the document was issued for",
-      "type": "Piece",
-      "schemaType": "Core",
-      "array": false,
-      "codelist": false,
-      "columnSubTypes": "PieceLiveAnimals|PieceDg|PieceLiveAnimals|PieceDg",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#DgDeclaration",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#issuedForPiece",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#Piece"
-    },
-    {
       "name": "arrivalLocation",
       "description": "Reference to the arrival Location",
       "type": "Location",
@@ -64,6 +40,18 @@
       "valueIRI": "https://onerecord.iata.org/ns/cargo#Location"
     },
     {
+      "name": "issuedForPiece",
+      "description": "Reference to the Piece the document was issued for",
+      "type": "PieceDg",
+      "schemaType": "DG",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#DgDeclaration",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#issuedForPiece",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#PieceDg"
+    },
+    {
       "name": "checks",
       "description": "References to the CheckActions performed on the object",
       "type": "Check",
@@ -74,6 +62,18 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#DgDeclaration",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
       "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
+    },
+    {
+      "name": "events",
+      "description": "Events object",
+      "type": "LogisticsEvent",
+      "schemaType": "Event",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#DgDeclaration",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "externalReferences",
@@ -89,7 +89,7 @@
     },
     {
       "name": "aircraftLimitationInformation",
-      "description": "Contains the Special Handling Code related to the prescribed limitation. Hardcoded to PASSENGER AND CARGO AIRCRAFT or CARGO AIRCRAFT ONLY. This field is mandatory for air (Air) ",
+      "description": "Contains the Special Handling Code related to the prescribed limitation. Hardcoded to PASSENGER AND CARGO AIRCRAFT or CARGO AIRCRAFT ONLY. This field is mandatory for air (Air)",
       "type": "string",
       "schemaType": "",
       "array": false,
@@ -101,7 +101,7 @@
     },
     {
       "name": "complianceDeclarationText",
-      "description": "Contains the warning message complying with the regulations text note. This field is mandatory for air (Air) ",
+      "description": "Contains the warning message complying with the regulations text note. This field is mandatory for air (Air)",
       "type": "string",
       "schemaType": "",
       "array": false,
@@ -137,7 +137,7 @@
     },
     {
       "name": "handlingInformation",
-      "description": "Free text. This may include items such as Control temperature for substances stabilized by temperature control; name and telephone number of a responsible person for infectious substances. ",
+      "description": "Free text. This may include items such as Control temperature for substances stabilized by temperature control, name and telephone number of a responsible person for infectious substances.",
       "type": "string",
       "schemaType": "",
       "array": false,
@@ -170,18 +170,6 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#DgDeclaration",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#shippingRefNo",
       "valueIRI": "http://www.w3.org/2001/XMLSchema#string"
-    },
-    {
-      "name": "events",
-      "description": "Events object",
-      "type": "LogisticsEvent",
-      "schemaType": "Event",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#DgDeclaration",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",

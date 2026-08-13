@@ -31,7 +31,11 @@ jobs:
         cache: 'npm'
 
     - name: Install dependencies
-      run: npm ci
+      # --include=dev because the job sets NODE_ENV=production, and the ontology
+      # generator's only dependency (n3) is a devDependency. npm 10 does not omit
+      # dev packages from `npm ci` on NODE_ENV alone, but stating it keeps the
+      # build working if that ever changes.
+      run: npm ci --include=dev
 
     - name: Build React
       run: npm run build

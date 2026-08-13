@@ -4,18 +4,6 @@
   "description": "Result of a Check",
   "columns": [
     {
-      "name": "resultOfCheck",
-      "description": "",
-      "type": "Check",
-      "schemaType": "Action",
-      "array": false,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#CheckTotalResult",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#resultOfCheck",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
-    },
-    {
       "name": "certifiedByActor",
       "description": "Reference to the Actor certifying the result of the Check if required",
       "type": "Person",
@@ -26,6 +14,18 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#CheckTotalResult",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#certifiedByActor",
       "valueIRI": "https://onerecord.iata.org/ns/cargo#Person"
+    },
+    {
+      "name": "resultOfCheck",
+      "description": "",
+      "type": "Check",
+      "schemaType": "Action",
+      "array": false,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CheckTotalResult",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#resultOfCheck",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
     },
     {
       "name": "resultValue",
@@ -50,6 +50,18 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#CheckTotalResult",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#checks",
       "valueIRI": "https://onerecord.iata.org/ns/cargo#Check"
+    },
+    {
+      "name": "events",
+      "description": "Events object",
+      "type": "LogisticsEvent",
+      "schemaType": "Event",
+      "array": true,
+      "codelist": false,
+      "columnSubTypes": "",
+      "classIRI": "https://onerecord.iata.org/ns/cargo#CheckTotalResult",
+      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
+      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "externalReferences",
@@ -86,18 +98,6 @@
       "classIRI": "https://onerecord.iata.org/ns/cargo#CheckTotalResult",
       "propertyIRI": "https://onerecord.iata.org/ns/cargo#passed",
       "valueIRI": "http://www.w3.org/2001/XMLSchema#boolean"
-    },
-    {
-      "name": "events",
-      "description": "Events object",
-      "type": "LogisticsEvent",
-      "schemaType": "Event",
-      "array": true,
-      "codelist": false,
-      "columnSubTypes": "",
-      "classIRI": "https://onerecord.iata.org/ns/cargo#CheckTotalResult",
-      "propertyIRI": "https://onerecord.iata.org/ns/cargo#events",
-      "valueIRI": "https://onerecord.iata.org/ns/cargo#LogisticsEvent"
     },
     {
       "name": "skeletonIndicator",

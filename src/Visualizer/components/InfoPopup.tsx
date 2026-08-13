@@ -1,8 +1,13 @@
 import { CloseIcon } from "../components";
 import { PopupProps } from "../types";
+import legend from "../../config/legend.json";
 
 export function InfoPopup(props: PopupProps) {
+  const schemaColors = props.schemaColors || {};
 
+  // Only show groups the current database actually contains, and take each
+  // colour from the live palette so the legend can never drift from the boxes.
+  const entries = legend.filter((entry) => schemaColors[entry.key]);
 
   return (
     <div
@@ -19,56 +24,16 @@ export function InfoPopup(props: PopupProps) {
 
         <div className="info-popup__body">
           <h2>Legend</h2>
-          <p>
-          <div className="flex">
-            <div className="tag embedded">Embedded</div>
-            <div className="tagDescription"> Objects usually embedded into Logistic Objects</div>
-          </div>
-          <div className="flex">
-            <div className="tag core">Core</div>
-            <div className="tagDescription"> Objects essential for the transportation supply chain</div>
-          </div>
-          <div className="flex">
-            <div className="tag service">Service</div>
-            <div className="tagDescription"> Objects subtypes of LogisticsService</div>
-          </div>
-          <div className="flex">
-            <div className="tag common">Common</div>
-            <div className="tagDescription"> Common objects that are usually used linked to other Logistic Objects</div>
-          </div>
-          <div className="flex">
-            <div className="tag abstract">Abstract</div>
-            <div className="tagDescription"> Superclass not used as such, e.g. LogisticsObject</div>
-          </div>
-          <div className="flex">
-            <div className="tag activity">Activity</div>
-            <div className="tagDescription"> Objects belonging to LogisticsActivity superclass</div>
-          </div>
-          <div className="flex">
-            <div className="tag event">Event</div>
-            <div className="tagDescription"> LogisticsEvents</div>
-          </div>
-          <div className="flex">
-            <div className="tag billing">Billing & Settlement</div>
-            <div className="tagDescription"> Objects specifically used for Billing& Settlement purposes</div>
-          </div>
-          <div className="flex">
-            <div className="tag distribution">Distribution</div>
-            <div className="tagDescription"> Objects designed and used mostly for Distribution </div>
-          </div>
-          <div className="flex">
-            <div className="tag agent">Agent</div>
-            <div className="tagDescription"> Objects part of LogisticsAgent superclass</div>
-          </div>
-          <div className="flex">
-            <div className="tag dangerGoods">Dangerous Goods</div>
-            <div className="tagDescription"> Objects specifically used for transportation of Dangerous Goods as per the DGR</div>
-          </div>
-          <div className="flex">
-            <div className="tag animals">Live Animals</div>
-            <div className="tagDescription"> Objects specifically used for transportation of Live Animals as per the LAR</div>
-          </div>
-          </p>
+          {entries.map((entry) => (
+            <div className="flex" key={entry.key}>
+              <div
+                className="tag"
+                style={{ backgroundColor: schemaColors[entry.key] }}>
+                {entry.label}
+              </div>
+              <div className="tagDescription"> {entry.description}</div>
+            </div>
+          ))}
           <h2>Shortcuts</h2>
           <p>
             <strong>SHIFT + hover</strong> over a table node or a column name to see the description.

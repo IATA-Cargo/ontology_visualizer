@@ -1,4 +1,8 @@
 {
+  "cargo_3_3": {
+    "name": "ONE Record Full Datamodel 3.3.0",
+    "description": "Visualization of the full ONE Record Data Model 3.3.0"
+  },
   "cargo_3_2": {
     "name": "ONE Record Full Datamodel 3.2.0",
     "description": "Visualization of the full ONE Record Data Model 3.2.0"

@@ -16,7 +16,9 @@ export const loadDatabaseConfig = async (databaseName: string) => {
   });
 
   tables.forEach(table => {
-    table.schemaColor = schemaColors[table.schema || "DEFAULT"];
+    // Fall back to DEFAULT when the group has no entry, rather than leaving
+    // schemaColor undefined and rendering an unstyled white header.
+    table.schemaColor = schemaColors[table.schema ?? "DEFAULT"] ?? schemaColors.DEFAULT;
   });
 
   return {
