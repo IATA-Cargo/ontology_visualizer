@@ -4,7 +4,7 @@
     "description": "Visualization of the full ONE Record Data Model 3.3.0"
   },
   "cargo_3_2": {
-    "name": "ONE Record Full Datamodel 3.2.0",
+    "name": "ONE Record Full Datamodel 3.2.0 (deprecated)",
     "description": "Visualization of the full ONE Record Data Model 3.2.0"
   },
   "cargo_full_3_1": {
