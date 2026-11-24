@@ -1,6 +1,6 @@
 # Ontology Visualizer
 
-The Ontology Visualizer provides a way to visualize the ONE Record data model in a graphical format. This data model is part of the IATA ONE Record standard, which aims to create a common language and standardized data structure for sharing information in the air cargo industry via a secured API. You can access this tool [here](https://iata-cargo.github.io/ontology_visualizer/databases/cargo_full)
+The Ontology Visualizer provides a way to visualize the ONE Record data model in a graphical format. This data model is part of the IATA ONE Record standard, which aims to create a common language and standardized data structure for sharing information in the air cargo industry via a secured API. You can access this tool [here](https://iata-cargo.github.io/ontology_visualizer/)
 
 The Ontology Visualizer is a modified version of the sql_schema_visualizer by [sqlhabit](https://github.com/sqlhabit/sql_schema_visualizer).
 
